@@ -111,5 +111,61 @@ export const treasures: Treasure[] = [
     "location": "Near Qumran, West Bank",
     "description": "One of the Dead Sea Scrolls, this copper scroll is a list of 64 locations where a massive treasure of gold and silver was hidden. None of the items have been recovered.",
     "coords": [31.7419, 35.4597]
+  },
+  {
+    id: "16",
+    name: "Lasseter's Reef",
+    location: "Central Australia",
+    description: "A fabulously rich gold reef said to be somewhere in the central Australian deserts. Its discoverer, Harold Bell Lasseter, died without revealing its exact location.",
+    coords: [-23.6980, 133.8807]
+  },
+  {
+    id: "17",
+    name: "The Nazi Gold Train",
+    location: "Wałbrzych, Poland",
+    description: "A train filled with gold, jewels, and art, rumored to have been hidden by the Nazis in a secret tunnel system in the Owl Mountains at the end of WWII.",
+    coords: [50.7682, 16.2842]
+  },
+  {
+    id: "18",
+    name: "Treasure of the Trinity",
+    location: "Ilha da Trindade, Brazil",
+    description: "A vast hoard of Inca gold and jewels stolen by pirates, said to be buried on a remote volcanic island off the Brazilian coast. Many have searched, but the island's treacherous terrain keeps its secrets.",
+    coords: [-20.5052, -29.3254]
+  },
+  {
+    id: "19",
+    name: "The Imperial Seal of China",
+    location: "China",
+    description: "Known as the Heirloom Seal of the Realm, this jade seal was a symbol of imperial power. It was lost during the chaos of the Five Dynasties and Ten Kingdoms period (907-960 AD).",
+    coords: [34.3416, 108.9398]
+  },
+  {
+    id: "20",
+    name: "The Tomb of Cleopatra",
+    location: "Near Alexandria, Egypt",
+    description: "The final resting place of Cleopatra and Mark Antony remains one of archaeology's greatest mysteries, believed to be hidden somewhere near the ancient city of Alexandria.",
+    coords: [31.2001, 29.9187]
+  },
+  {
+    id: "21",
+    name: "Sword of Kusanagi",
+    location: "Atsuta Shrine, Nagoya, Japan",
+    description: "One of the three Imperial Regalia of Japan, this legendary sword's true existence and location are unconfirmed, shrouded in centuries of myth and secrecy.",
+    coords: [35.1257, 136.9084]
+  },
+  {
+    id: "22",
+    name: "Montezuma's Treasure",
+    location: "Lake Texcoco, Mexico",
+    description: "The immense treasure of the Aztec Empire, said to have been cast into Lake Texcoco by the Aztecs during the Spanish siege of Tenochtitlan in 1520.",
+    coords: [19.4326, -99.1332]
+  },
+  {
+    id: "23",
+    name: "The Wreck of the São João",
+    location: "Port Edward, South Africa",
+    description: "A Portuguese galleon laden with riches from India that wrecked in 1552. It was one of the first major European shipwrecks on the South African coast.",
+    coords: [-31.0506, 30.2225]
   }
 ];
