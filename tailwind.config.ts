@@ -12,6 +12,7 @@ export default {
       fontFamily: {
         body: ['Rubik', 'sans-serif'],
         headline: ['Rubik', 'sans-serif'],
+        logo: ['Roboto Slab', 'serif'],
         code: ['monospace'],
       },
       colors: {
