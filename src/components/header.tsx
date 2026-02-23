@@ -39,12 +39,12 @@ export function Header() {
             </g>
         </svg>
       </Link>
-      <div className="flex items-center gap-4">
-        <Button asChild>
-          <Link href="/tools">Buy Treasure Hunting Tools</Link>
-        </Button>
+      <div className="flex items-center gap-3">
         <Button asChild variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-transparent">
           <Link href="/partner">Partner with Us</Link>
+        </Button>
+        <Button asChild>
+          <Link href="/tools">Buy Treasure Hunting Tools</Link>
         </Button>
       </div>
     </header>
