@@ -20,7 +20,7 @@ body {
     --secondary-foreground: 0 0% 9%;
     --muted: 0 0% 96.1%;
     --muted-foreground: 0 0% 45.1%;
-    --accent: 201 100% 14%;
+    --accent: 29 78% 12%;
     --accent-foreground: 0 0% 98%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
@@ -41,7 +41,7 @@ body {
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
-    --header-background: 201 100% 14%;
+    --header-background: 29 78% 12%;
     --header-foreground: 45 68% 52%;
   }
   .dark {
@@ -77,7 +77,7 @@ body {
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
-    --header-background: 201 100% 14%;
+    --header-background: 29 78% 12%;
     --header-foreground: 45 68% 52%;
   }
 }
