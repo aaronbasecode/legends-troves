@@ -13,7 +13,7 @@ export function Header() {
           xmlns="http://www.w3.org/2000/svg"
           fill="currentColor"
         >
-          <path d="M21.33 7.18H13.8V5.6c0-.86-.69-1.56-1.56-1.56h-.48c-.87 0-1.56.7-1.56 1.56v1.58H4.67c-.61 0-1.11.5-1.11 1.1v2.72c0 .6.5 1.1 1.11 1.1h5.53v6.72c0 .61.5 1.1 1.11 1.1h.94c.61 0 1.11-.5 1.11-1.1V12.1h5.53c.61 0 1.11-.5 1.11-1.1V8.28c0-.6-.5-1.1-1.11-1.1zM12.24 18.82h-.48V7.18h.48v11.64z"/>
+          <path d="M12.42 20.73h-1.1V13H7.32v-1h4V5h1.1v7h4v1h-4v7.73zM9.22 7.53h4.6c0-2-.5-2.7-1.6-2.7s-1.2.3-1.4.6c-.3.4-.4 1-.4 3.1H9.22zM8.12 6.53c.2-1.7 1.2-2.8 2.9-2.8s2.7 1 2.7 3H8.12z"/>
         </svg>
         <div className="flex flex-col -space-y-2">
             <span className="text-lg font-logo font-black uppercase tracking-wider">Legends</span>
