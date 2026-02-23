@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useEffect, useRef } from 'react';
@@ -6,6 +7,8 @@ import 'leaflet/dist/leaflet.css';
 import { treasures, type Treasure } from '@/lib/treasures';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import ReactDOMServer from 'react-dom/server';
+import { Button } from '@/components/ui/button';
+import { ZoomIn, ZoomOut } from 'lucide-react';
 
 // Fix for default icon paths being wrong in Next.js
 import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png';
@@ -46,6 +49,7 @@ const Map = () => {
         center: [20, 0],
         zoom: 3,
         minZoom: 2,
+        zoomControl: false,
       });
 
       L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
@@ -94,7 +98,27 @@ const Map = () => {
     };
   }, []);
 
-  return <div ref={mapContainer} className="h-full w-full" />;
+  const handleZoomIn = () => {
+    mapRef.current?.zoomIn();
+  };
+
+  const handleZoomOut = () => {
+    mapRef.current?.zoomOut();
+  };
+
+  return (
+    <div className="h-full w-full relative">
+      <div ref={mapContainer} className="h-full w-full" />
+      <div className="absolute top-24 left-4 z-[1000] flex flex-col gap-2">
+          <Button size="icon" onClick={handleZoomIn} className="bg-header text-header-foreground hover:bg-header/90">
+              <ZoomIn />
+          </Button>
+          <Button size="icon" onClick={handleZoomOut} className="bg-header text-header-foreground hover:bg-header/90">
+              <ZoomOut />
+          </Button>
+      </div>
+    </div>
+  );
 };
 
 export default Map;
