@@ -136,9 +136,9 @@ export const treasures: Treasure[] = [
   {
     id: "19",
     name: "The Imperial Seal of China",
-    location: "China",
-    description: "Known as the Heirloom Seal of the Realm, this jade seal was a symbol of imperial power. It was lost during the chaos of the Five Dynasties and Ten Kingdoms period (907-960 AD).",
-    coords: [34.3416, 108.9398]
+    "location": "China",
+    "description": "Known as the Heirloom Seal of the Realm, this jade seal was a symbol of imperial power. It was lost during the chaos of the Five Dynasties and Ten Kingdoms period (907-960 AD).",
+    "coords": [34.3416, 108.9398]
   },
   {
     id: "20",
@@ -167,5 +167,33 @@ export const treasures: Treasure[] = [
     location: "Port Edward, South Africa",
     description: "A Portuguese galleon laden with riches from India that wrecked in 1552. It was one of the first major European shipwrecks on the South African coast.",
     coords: [-31.0506, 30.2225]
+  },
+  {
+    id: "24",
+    name: "The Lost Tomb of Genghis Khan",
+    location: "Khentii Mountains, Mongolia",
+    description: "The undiscovered tomb of the great Mongol emperor, said to be filled with immense treasures gathered from across his vast empire. The location is a closely guarded secret, protected by an ancient curse.",
+    coords: [48.0, 109.0]
+  },
+  {
+    id: "25",
+    name: "The Lost Hoard of Bactria",
+    location: "Panj River Valley, Tajikistan",
+    description: "A legendary collection of gold artifacts from the ancient Greco-Bactrian Kingdom, said to have been lost in the treacherous mountain passes along the Oxus River.",
+    coords: [37.1, 69.8]
+  },
+  {
+    id: "26",
+    name: "The Sunken Treasure of Issyk-Kul",
+    location: "Lake Issyk-Kul, Kyrgyzstan",
+    description: "Legends speak of a vast treasure, possibly from a lost city or monastery, submerged beneath the waters of the 'hot lake,' Issyk-Kul.",
+    coords: [42.4, 77.2]
+  },
+  {
+    id: "27",
+    name: "The Secret Library of Otrar",
+    location: "Near Otrar, Kazakhstan",
+    description: "Before its destruction, Otrar was famed for its library. Rumor has it a secret cache of priceless scrolls was hidden before the city fell to the Mongols.",
+    coords: [42.85, 68.3]
   }
 ];
