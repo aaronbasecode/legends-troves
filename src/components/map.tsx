@@ -59,7 +59,7 @@ const Map = () => {
 
       const landIconHtml = `
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 276 331" style="enable-background:new 0 0 276 331;" xml:space="preserve" class="transition-transform group-hover:scale-110" width="36" height="43">
+	 viewBox="0 0 276 331" style="enable-background:new 0 0 276 331;" xml:space="preserve" class="transition-transform group-hover:scale-110" width="17" height="20">
 <style type="text/css">
 	.st_land_0{fill:#D4AF37;}
 	.st_land_1{fill:#2C2504;}
@@ -94,7 +94,7 @@ const Map = () => {
 
       const nauticalIconHtml = `
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 355 355" style="enable-background:new 0 0 355 355;" xml:space="preserve" class="transition-transform group-hover:scale-110" width="36" height="36">
+	 viewBox="0 0 355 355" style="enable-background:new 0 0 355 355;" xml:space="preserve" class="transition-transform group-hover:scale-110" width="20" height="20">
 <style type="text/css">
 	.st_naut_0{fill:#D4AF37;}
 	.st_naut_1{fill:#2C2504;}
@@ -150,17 +150,17 @@ const Map = () => {
       const landIcon = L.divIcon({
           html: landIconHtml,
           className: 'bg-transparent border-0 group',
-          iconSize: [36, 43],
-          iconAnchor: [18, 43],
-          popupAnchor: [0, -43],
+          iconSize: [17, 20],
+          iconAnchor: [8.5, 20],
+          popupAnchor: [0, -20],
       });
 
       const nauticalIcon = L.divIcon({
           html: nauticalIconHtml,
           className: 'bg-transparent border-0 group',
-          iconSize: [36, 36],
-          iconAnchor: [18, 36],
-          popupAnchor: [0, -36],
+          iconSize: [20, 20],
+          iconAnchor: [10, 20],
+          popupAnchor: [0, -20],
       });
 
       treasures.forEach(treasure => {
