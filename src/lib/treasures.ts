@@ -136,9 +136,9 @@ export const treasures: Treasure[] = [
   {
     id: "19",
     name: "The Imperial Seal of China",
-    "location": "China",
-    "description": "Known as the Heirloom Seal of the Realm, this jade seal was a symbol of imperial power. It was lost during the chaos of the Five Dynasties and Ten Kingdoms period (907-960 AD).",
-    "coords": [34.3416, 108.9398]
+    location: "China",
+    description: "Known as the Heirloom Seal of the Realm, this jade seal was a symbol of imperial power. It was lost during the chaos of the Five Dynasties and Ten Kingdoms period (907-960 AD).",
+    coords: [34.3416, 108.9398]
   },
   {
     id: "20",
@@ -195,5 +195,40 @@ export const treasures: Treasure[] = [
     location: "Near Otrar, Kazakhstan",
     description: "Before its destruction, Otrar was famed for its library. Rumor has it a secret cache of priceless scrolls was hidden before the city fell to the Mongols.",
     coords: [42.85, 68.3]
+  },
+  {
+    id: "28",
+    name: "The Merchant Royal",
+    location: "Off Land's End, Cornwall, England",
+    description: "Known as the 'El Dorado of the Seas', this 17th-century English merchant ship sank with a cargo of gold and silver worth billions today. Its wreckage remains unfound.",
+    coords: [50.05, -5.67]
+  },
+  {
+    id: "29",
+    name: "The Santa Maria",
+    location: "Off the coast of Haiti",
+    description: "The flagship of Christopher Columbus's first voyage, which ran aground on Christmas Eve 1492. Its exact final resting place is one of maritime history's greatest secrets.",
+    coords: [19.75, -72.25]
+  },
+  {
+    id: "30",
+    name: "The Awa Maru",
+    location: "Taiwan Strait",
+    description: "A Japanese ocean liner torpedoed in 1945. It was rumored to be carrying the fossilized remains of Peking Man and billions in gold and platinum treasures.",
+    coords: [24.4, 119.4]
+  },
+  {
+    id: "31",
+    name: "The Nuestra Señora de la Concepción",
+    location: "Off the coast of Saipan",
+    description: "A Spanish galleon that wrecked in 1638 while carrying a massive cargo of gold, jewels, and Chinese porcelain destined for Mexico.",
+    coords: [15.2, 145.7]
+  },
+  {
+    id: "32",
+    name: "The San Miguel",
+    location: "Off Amelia Island, Florida, USA",
+    description: "Part of the 1715 Treasure Fleet, this flagship is believed to have been carrying a specialized 'Queen's jewels' cargo that has never been recovered.",
+    coords: [30.6, -81.4]
   }
 ];
