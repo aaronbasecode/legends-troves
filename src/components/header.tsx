@@ -39,7 +39,10 @@ export function Header() {
             </g>
         </svg>
       </Link>
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-4">
+        <Link href="/partner" className="text-sm font-medium hover:text-primary transition-colors">
+          Partner with Us
+        </Link>
         <Button asChild>
           <Link href="/tools">Buy Treasure Hunting Tools</Link>
         </Button>
