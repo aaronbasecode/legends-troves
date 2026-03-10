@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 
 export function Header() {
   return (
@@ -43,9 +42,6 @@ export function Header() {
         <Link href="/partner" className="text-sm font-medium hover:text-primary transition-colors">
           Partner with Us
         </Link>
-        <Button asChild>
-          <Link href="/tools">Buy Treasure Hunting Tools</Link>
-        </Button>
       </div>
     </header>
   );
