@@ -39,8 +39,8 @@ export function Header() {
         </svg>
       </Link>
       <div className="flex items-center gap-4">
-        <Link href="/partner" className="text-sm font-medium hover:text-primary transition-colors">
-          Partner with Us
+        <Link href="/shop" className="text-sm font-medium hover:text-primary transition-colors">
+          Shop Merch
         </Link>
       </div>
     </header>
