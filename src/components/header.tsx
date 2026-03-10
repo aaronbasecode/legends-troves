@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export function Header() {
   return (
@@ -38,6 +39,11 @@ export function Header() {
             </g>
         </svg>
       </Link>
+      <Button asChild variant="outline" className="border-primary text-primary hover:bg-primary hover:text-accent font-medium">
+        <a href="https://legendstroves.etsy.com" target="_blank" rel="noopener noreferrer">
+          Shop Merch
+        </a>
+      </Button>
     </header>
   );
 }
