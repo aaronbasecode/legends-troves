@@ -38,11 +38,6 @@ export function Header() {
             </g>
         </svg>
       </Link>
-      <div className="flex items-center gap-4">
-        <Link href="/shop" className="text-sm font-medium hover:text-primary transition-colors">
-          Shop Merch
-        </Link>
-      </div>
     </header>
   );
 }
