@@ -41,12 +41,12 @@ export function Header() {
       </Link>
       <div className="flex gap-4">
         <Button asChild variant="ghost" className="text-primary hover:bg-primary/20 hover:text-primary font-medium shadow-none">
-          <Link href="/tools">Shop Treasure Hunting Tools</Link>
-        </Button>
-        <Button asChild variant="ghost" className="text-primary hover:bg-primary/20 hover:text-primary font-medium shadow-none">
           <a href="https://legendstroves.etsy.com" target="_blank" rel="noopener noreferrer">
             Shop Merch
           </a>
+        </Button>
+        <Button asChild variant="ghost" className="text-primary hover:bg-primary/20 hover:text-primary font-medium shadow-none">
+          <Link href="/tools">Shop Treasure Hunting Tools</Link>
         </Button>
       </div>
     </header>
