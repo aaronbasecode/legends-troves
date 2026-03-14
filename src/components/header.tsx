@@ -39,11 +39,16 @@ export function Header() {
             </g>
         </svg>
       </Link>
-      <Button asChild className="bg-primary text-accent hover:bg-primary/90 font-medium border-none shadow-none">
-        <a href="https://legendstroves.etsy.com" target="_blank" rel="noopener noreferrer">
-          Shop Merch
-        </a>
-      </Button>
+      <div className="flex gap-4">
+        <Button asChild variant="outline" className="border-primary text-primary hover:bg-primary hover:text-accent font-medium shadow-none">
+          <Link href="/tools">Shop Treasure Hunting Tools</Link>
+        </Button>
+        <Button asChild className="bg-primary text-accent hover:bg-primary/90 font-medium border-none shadow-none">
+          <a href="https://legendstroves.etsy.com" target="_blank" rel="noopener noreferrer">
+            Shop Merch
+          </a>
+        </Button>
+      </div>
     </header>
   );
 }
