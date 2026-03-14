@@ -45,7 +45,7 @@ export function Header() {
             Shop Merch
           </a>
         </Button>
-        <Button asChild variant="ghost" className="text-primary hover:bg-primary/20 hover:text-primary font-medium shadow-none">
+        <Button asChild className="bg-primary text-accent hover:bg-primary/90 font-medium shadow-md">
           <Link href="/tools">Shop Treasure Hunting Tools</Link>
         </Button>
       </div>
