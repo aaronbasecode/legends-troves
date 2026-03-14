@@ -43,7 +43,7 @@ export function Header() {
         <Button asChild variant="ghost" className="text-primary hover:bg-primary/20 hover:text-primary font-medium shadow-none">
           <Link href="/tools">Shop Treasure Hunting Tools</Link>
         </Button>
-        <Button asChild className="bg-primary text-accent hover:bg-primary/90 font-medium border-none shadow-none">
+        <Button asChild variant="ghost" className="text-primary hover:bg-primary/20 hover:text-primary font-medium shadow-none">
           <a href="https://legendstroves.etsy.com" target="_blank" rel="noopener noreferrer">
             Shop Merch
           </a>
