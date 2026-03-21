@@ -5,7 +5,7 @@ export function Header() {
   return (
     <header className="absolute top-0 left-0 right-0 z-[1000] px-6 py-2 flex justify-between items-center bg-header text-header-foreground border-b border-primary/10">
       <Link href="/" className="flex items-center hover:opacity-90 transition-opacity">
-        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 798 266.62" className="h-14 w-auto">
+        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 798 266.62" className="h-10 w-auto">
           <defs>
             <style>{`.cls-1{fill:#D4AF37;}`}</style>
           </defs>
