@@ -11,7 +11,9 @@ export default {
     extend: {
       fontFamily: {
         body: ['Rubik', 'sans-serif'],
-        headline: ['Rubik', 'sans-serif'],
+        headline: ['Germania One', 'MedievalSharp', 'Rubik', 'sans-serif'],
+        gothic: ['Germania One', 'MedievalSharp', 'serif'],
+        germania: ['Germania One', 'MedievalSharp', 'serif'],
         logo: ['Roboto Slab', 'serif'],
         code: ['monospace'],
       },

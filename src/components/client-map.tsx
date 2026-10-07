@@ -1,7 +1,6 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { useMemo } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 
 function MapSkeleton() {
@@ -17,16 +16,12 @@ function MapSkeleton() {
   );
 }
 
-const ClientMap = () => {
-  const Map = useMemo(
-    () =>
-      dynamic(() => import("@/components/map"), {
-        loading: () => <MapSkeleton />,
-        ssr: false,
-      }),
-    []
-  );
+const Map = dynamic(() => import("@/components/map"), {
+  loading: () => <MapSkeleton />,
+  ssr: false,
+});
 
+const ClientMap = () => {
   return <Map />;
 };
 

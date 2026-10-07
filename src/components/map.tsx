@@ -7,7 +7,8 @@ import { treasures, type Treasure } from '@/lib/treasures';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import ReactDOMServer from 'react-dom/server';
 import { Button } from '@/components/ui/button';
-import { Plus, Minus } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Plus as PlusIcon, Minus as MinusIcon } from '@phosphor-icons/react';
 
 // Fix for default icon paths being wrong in Next.js
 import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png';
@@ -26,17 +27,145 @@ const defaultIcon = L.icon({
 
 L.Marker.prototype.options.icon = defaultIcon;
 
-const TreasurePopup = ({ treasure }: { treasure: Treasure }) => (
-  <Card className="w-64 border-none shadow-none bg-[#2C2504]">
-    <CardHeader className="p-4 pb-0.5">
-      <CardTitle className="text-lg font-headline text-primary leading-tight">{treasure.name}</CardTitle>
-    </CardHeader>
-    <CardContent className="p-4 pt-0.5">
-      <p className="text-sm text-white mb-1 leading-snug">{treasure.description}</p>
-      <p className="text-xs text-white/80 italic">{treasure.location}</p>
-    </CardContent>
-  </Card>
-);
+const getTreasureUrl = (id: string, name?: string): string | null => {
+  if (id === "1" || name?.toLowerCase().includes("blackheart")) {
+    return "/blog/captain-blackheart";
+  }
+  if (id === "2" || name?.toLowerCase().includes("azure coast") || name?.toLowerCase().includes("saint-tropez")) {
+    return "/blog/the-sunken-galleon-of-the-azure-coast";
+  }
+  if (id === "29" || name?.toLowerCase().includes("santa maria")) {
+    return "/blog/santa-maria";
+  }
+  if (["5", "33", "34"].includes(id) || name?.toLowerCase().includes("yamashita")) {
+    return "/blog/yamashita-gold";
+  }
+  if (id === "7" || name?.toLowerCase().includes("dutchman")) {
+    return "/blog/lost-dutchman";
+  }
+  if (id === "22" || name?.toLowerCase().includes("montezuma")) {
+    return "/blog/montezumas-treasure";
+  }
+  if (id === "32" || name?.toLowerCase().includes("san miguel")) {
+    return "/blog/san-miguel";
+  }
+  if (id === "30" || name?.toLowerCase().includes("awa maru")) {
+    return "/blog/the-awa-maru";
+  }
+  if (id === "8" || name?.toLowerCase().includes("oak island")) {
+    return "/blog/oak-island";
+  }
+  if (id === "9" || name?.toLowerCase().includes("flor de la mar") || name?.toLowerCase().includes("flor do mar")) {
+    return "/blog/the-wreck-of-the-flor-de-la-mar";
+  }
+  if (id === "10" || name?.toLowerCase().includes("lima")) {
+    return "/blog/treasure-of-lima";
+  }
+  if (id === "3" || name?.toLowerCase().includes("dorado")) {
+    return "/blog/el-dorado";
+  }
+  if (id === "4" || name?.toLowerCase().includes("amber")) {
+    return "/blog/the-amber-room";
+  }
+  if (id === "6" || name?.toLowerCase().includes("templar")) {
+    return "/blog/the-treasure-of-the-knights-templar";
+  }
+  if (id === "12" || name?.toLowerCase().includes("king john") || name?.toLowerCase().includes("crown jewels")) {
+    return "/blog/king-johns-crown-jewels";
+  }
+  if (id === "13" || name?.toLowerCase().includes("caesar")) {
+    return "/blog/city-of-the-caesars";
+  }
+  if (id === "15" || name?.toLowerCase().includes("copper scroll") || name?.toLowerCase().includes("copper")) {
+    return "/blog/the-treasure-of-the-copper-scroll";
+  }
+  if (id === "16" || name?.toLowerCase().includes("lasseter")) {
+    return "/blog/lasseters-reef";
+  }
+  if (id === "17" || name?.toLowerCase().includes("gold train") || name?.toLowerCase().includes("nazi")) {
+    return "/blog/the-nazi-gold-train";
+  }
+  if (id === "18" || name?.toLowerCase().includes("trinity") || name?.toLowerCase().includes("trindade")) {
+    return "/blog/treasure-of-the-trinity";
+  }
+  if (id === "20" || name?.toLowerCase().includes("cleopatra")) {
+    return "/blog/the-tomb-of-cleopatra";
+  }
+  if (id === "23" || name?.toLowerCase().includes("são joão") || name?.toLowerCase().includes("sao joao") || name?.toLowerCase().includes("joao")) {
+    return "/blog/the-wreck-of-the-sao-joao";
+  }
+  if (id === "28" || name?.toLowerCase().includes("merchant royal") || name?.toLowerCase().includes("royal merchant")) {
+    return "/blog/the-merchant-royal";
+  }
+  if (id === "27" || name?.toLowerCase().includes("otrar") || name?.toLowerCase().includes("secret library")) {
+    return "/blog/the-secret-library-of-otrar";
+  }
+  if (id === "25" || name?.toLowerCase().includes("bactria")) {
+    return "/blog/the-lost-hoard-of-bactria";
+  }
+  if (id === "26" || name?.toLowerCase().includes("issyk-kul") || name?.toLowerCase().includes("issyk kul")) {
+    return "/blog/the-sunken-treasure-of-issyk-kul";
+  }
+  if (id === "14" || name?.toLowerCase().includes("padmanabhaswamy") || name?.toLowerCase().includes("vault b")) {
+    return "/blog/padmanabhaswamy-temple-vault-b";
+  }
+  if (id === "11" || name?.toLowerCase().includes("czar") || name?.toLowerCase().includes("tsar") || name?.toLowerCase().includes("baikal")) {
+    return "/blog/the-czars-lost-gold";
+  }
+  if (id === "24" || name?.toLowerCase().includes("genghis") || name?.toLowerCase().includes("khan")) {
+    return "/blog/the-lost-tomb-of-genghis-khan";
+  }
+  if (id === "19" || name?.toLowerCase().includes("imperial seal") || name?.toLowerCase().includes("seal of china") || name?.toLowerCase().includes("heirloom seal")) {
+    return "/blog/the-imperial-seal-of-china";
+  }
+  if (id === "21" || name?.toLowerCase().includes("kusanagi")) {
+    return "/blog/sword-of-kusanagi";
+  }
+  if (id === "31" || name?.toLowerCase().includes("concepcion") || name?.toLowerCase().includes("concepción")) {
+    return "/blog/the-nuestra-senora-de-la-concepcion";
+  }
+  return null;
+};
+
+const TreasurePopup = ({ treasure }: { treasure: Treasure }) => {
+  const url = getTreasureUrl(treasure.id, treasure.name);
+
+  return (
+    <div className="w-[300px] sm:w-[330px] max-w-[calc(100vw-32px)] bg-[#302503] rounded-[14px] p-5 sm:p-6 text-left border-none shadow-xl flex flex-col">
+      <h3 className="font-germania font-normal text-[20px] text-white leading-[1.25] mb-3 outline-none border-none [text-shadow:none] [-webkit-text-stroke:0] antialiased">
+        {treasure.name}
+      </h3>
+      <div className="flex flex-col gap-[5px]">
+        <p className="text-[16px] text-white/90 leading-[1.38]">
+          {treasure.description}
+        </p>
+        <p className="text-[14px] text-white/80 leading-normal">
+          {treasure.location}
+        </p>
+        <div className="text-left">
+          {url ? (
+            <a 
+              href={url} 
+              className="inline-flex items-center text-[16px] font-semibold !text-[#d8ae31] hover:!text-[#e8be3e] transition-colors group"
+              style={{ color: '#d8ae31' }}
+            >
+              <span style={{ color: '#d8ae31' }}>Learn more</span>
+              <ArrowRight className="w-4 h-4 ml-1.5 transition-transform group-hover:translate-x-1 !text-[#d8ae31]" style={{ color: '#d8ae31' }} />
+            </a>
+          ) : (
+            <span 
+              className="inline-flex items-center text-[16px] font-semibold !text-[#d8ae31] cursor-default select-none"
+              style={{ color: '#d8ae31' }}
+            >
+              <span style={{ color: '#d8ae31' }}>Learn more</span>
+              <ArrowRight className="w-4 h-4 ml-1.5 !text-[#d8ae31]" style={{ color: '#d8ae31' }} />
+            </span>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const Map = () => {
   const mapContainer = useRef<HTMLDivElement>(null);
@@ -51,15 +180,17 @@ const Map = () => {
         zoomControl: false,
       });
 
-      L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-        subdomains: 'abcd',
-        maxZoom: 19
+      L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC',
+        className: 'ancient-tiles',
+        maxZoom: 16,
+        updateWhenIdle: true,
+        keepBuffer: 2,
       }).addTo(mapRef.current);
 
       const landIconHtml = `
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 276 331" style="enable-background:new 0 0 276 331;" xml:space="preserve" class="transition-transform group-hover:scale-110" width="17" height="20">
+	 viewBox="0 0 276 331" style="enable-background:new 0 0 276 331;" xml:space="preserve" class="transition-transform group-hover:scale-110" width="25" height="28">
 <style type="text/css">
 	.st_land_0{fill:#D4AF37;}
 	.st_land_1{fill:#2C2504;}
@@ -94,7 +225,7 @@ const Map = () => {
 
       const nauticalIconHtml = `
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 355 355" style="enable-background:new 0 0 355 355;" xml:space="preserve" class="transition-transform group-hover:scale-110" width="20" height="20">
+	 viewBox="0 0 355 355" style="enable-background:new 0 0 355 355;" xml:space="preserve" class="transition-transform group-hover:scale-110" width="32" height="32">
 <style type="text/css">
 	.st_naut_0{fill:#D4AF37;}
 	.st_naut_1{fill:#2C2504;}
@@ -150,25 +281,44 @@ const Map = () => {
       const landIcon = L.divIcon({
           html: landIconHtml,
           className: 'bg-transparent border-0 group',
-          iconSize: [17, 20],
-          iconAnchor: [8.5, 20],
-          popupAnchor: [0, -20],
+          iconSize: [25, 28],
+          iconAnchor: [12.5, 28],
+          popupAnchor: [0, -28],
       });
 
       const nauticalIcon = L.divIcon({
           html: nauticalIconHtml,
           className: 'bg-transparent border-0 group',
-          iconSize: [20, 20],
-          iconAnchor: [10, 20],
-          popupAnchor: [0, -20],
+          iconSize: [32, 32],
+          iconAnchor: [16, 32],
+          popupAnchor: [0, -32],
       });
 
       treasures.forEach(treasure => {
         const markerIcon = treasure.category === 'water' ? nauticalIcon : landIcon;
         const marker = L.marker(treasure.coords as L.LatLngExpression, { icon: markerIcon }).addTo(mapRef.current!);
         
-        const popupContent = ReactDOMServer.renderToString(<TreasurePopup treasure={treasure} />);
-        marker.bindPopup(popupContent, { minWidth: 256 });
+        marker.on('popupopen', () => {
+          const el = marker.getElement();
+          if (el) {
+            el.classList.add('active-marker');
+          }
+        });
+
+        marker.on('popupclose', () => {
+          const el = marker.getElement();
+          if (el) {
+            el.classList.remove('active-marker');
+          }
+        });
+
+        marker.bindPopup(() => ReactDOMServer.renderToString(<TreasurePopup treasure={treasure} />), {
+          minWidth: 280,
+          maxWidth: 350,
+          autoPanPaddingTopLeft: [16, 72],
+          autoPanPaddingBottomRight: [16, 16],
+          closeButton: false,
+        });
       });
     }
 
@@ -191,12 +341,12 @@ const Map = () => {
   return (
     <div className="h-full w-full relative">
       <div ref={mapContainer} className="h-full w-full" />
-      <div className="absolute top-24 left-4 z-[1000] flex flex-col gap-[2px]">
-          <Button size="icon" onClick={handleZoomIn} className="h-8 w-8 bg-primary text-accent hover:bg-primary/90">
-              <Plus className="w-5 h-5" />
+      <div className="absolute top-16 sm:top-24 left-3 sm:left-4 z-[1000] flex flex-col gap-1.5 sm:gap-[2px]">
+          <Button size="icon" onClick={handleZoomIn} aria-label="Zoom in" className="h-9 w-9 sm:h-8 sm:w-8 bg-primary text-accent hover:bg-primary/90 shadow-md [&_svg]:size-auto">
+              <PlusIcon size={20} weight="bold" />
           </Button>
-          <Button size="icon" onClick={handleZoomOut} className="h-8 w-8 bg-primary text-accent hover:bg-primary/90">
-              <Minus className="w-5 h-5" />
+          <Button size="icon" onClick={handleZoomOut} aria-label="Zoom out" className="h-9 w-9 sm:h-8 sm:w-8 bg-primary text-accent hover:bg-primary/90 shadow-md [&_svg]:size-auto">
+              <MinusIcon size={20} weight="bold" />
           </Button>
       </div>
     </div>

@@ -86,23 +86,64 @@ body {
   * {
     @apply border-border;
   }
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden;
+    touch-action: manipulation;
   }
 }
 
 .leaflet-popup-content-wrapper {
-  @apply bg-background/80 backdrop-blur-sm rounded-lg shadow-lg border border-accent/20 !important;
+  @apply bg-[#302503] rounded-[14px] shadow-2xl p-0 !important;
+  border: none !important;
+  max-width: calc(100vw - 32px) !important;
 }
 
 .leaflet-popup-content {
   @apply m-0 !important;
+  max-width: 100% !important;
+}
+
+.leaflet-popup-content p {
+  margin: 0 !important;
 }
 
 .leaflet-popup-close-button {
-  @apply text-foreground !important;
+  display: none !important;
 }
 
 .leaflet-popup-tip {
-  @apply bg-accent/20 !important;
+  @apply bg-[#302503] !important;
+  border: none !important;
+  box-shadow: none !important;
 }
+
+.leaflet-container a,
+.leaflet-container a:hover,
+.leaflet-container a:visited,
+.leaflet-container a:active {
+  color: #d8ae31 !important;
+}
+
+.leaflet-marker-icon svg {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform-origin: bottom center;
+}
+
+.leaflet-marker-icon.active-marker {
+  z-index: 1000 !important;
+}
+
+.leaflet-marker-icon.active-marker svg {
+  transform: scale(2);
+}
+
+.ancient-tiles .leaflet-tile {
+  filter: sepia(35%) contrast(105%) brightness(95%) saturate(90%);
+}
+
+
