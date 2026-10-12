@@ -1,4 +1,5 @@
 import type {Metadata, Viewport} from 'next';
+import Script from 'next/script';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
@@ -41,6 +42,19 @@ export default function RootLayout({
       <body className="font-body antialiased" suppressHydrationWarning>
         {children}
         <Toaster />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-YYBFC3V2KM"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-YYBFC3V2KM');
+          `}
+        </Script>
       </body>
     </html>
   );
