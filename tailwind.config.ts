@@ -15,7 +15,6 @@ export default {
         gothic: ['Germania One', 'MedievalSharp', 'serif'],
         germania: ['Germania One', 'MedievalSharp', 'serif'],
         logo: ['Roboto Slab', 'serif'],
-        inter: ['Inter', 'sans-serif'],
         code: ['monospace'],
       },
       colors: {
