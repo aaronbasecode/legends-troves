@@ -43,7 +43,7 @@ export default function RootLayout({
         {children}
         <Toaster />
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-YYBFC3V2KM"
+          src="https://www.googletagmanager.com/gtag/js?id=G-KELCEGCYTL"
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -52,7 +52,7 @@ export default function RootLayout({
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', 'G-YYBFC3V2KM');
+            gtag('config', 'G-KELCEGCYTL');
           `}
         </Script>
       </body>
