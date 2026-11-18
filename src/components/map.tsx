@@ -308,6 +308,8 @@ const Map = () => {
         { id: '22', keyword: 'montezuma', icon: createCoinIcon('/images/montezuma-icon.webp', "Montezuma's Treasure") },
         { id: '7', keyword: 'dutchman', icon: createCoinIcon('/images/lost-dutchman-icon.webp', "The Lost Dutchman's Gold Mine") },
         { id: '8', keyword: 'oak island', icon: createCoinIcon('/images/oak-island-icon.webp', 'Oak Island Money Pit') },
+        { id: '32', keyword: 'san miguel', icon: createCoinIcon('/images/san-miguel-icon.webp', 'The San Miguel') },
+        { id: '10', keyword: 'lima', icon: createCoinIcon('/images/treasure-of-lima-icon.webp', 'The Treasure of Lima') },
       ];
 
       treasures.forEach(treasure => {

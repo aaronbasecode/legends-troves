@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { BlogLayout, BlogSection, BlogList, BlogListItem } from '@/components/blog-layout';
 
 export const metadata: Metadata = {
@@ -10,6 +11,17 @@ export default function TreasureOfLimaPage() {
   return (
     <BlogLayout
       category="land"
+      topIcon={
+        <Image
+          src="/images/treasure-of-lima-icon.webp"
+          alt="The Treasure of Lima Coin"
+          width={80}
+          height={80}
+          unoptimized
+          className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+          priority
+        />
+      }
       title="The Treasure of Lima"
       imageSrc="/images/treasure-of-lima.jpg"
       imageAlt="Captain Thompson and crew burying the 7-foot gold Virgin Mary statue and Lima Cathedral church treasures inside the Cocos Island jungle"

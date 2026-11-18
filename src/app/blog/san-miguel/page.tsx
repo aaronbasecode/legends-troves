@@ -1,9 +1,21 @@
+import Image from 'next/image';
 import { BlogLayout, BlogSection, BlogList, BlogListItem } from '@/components/blog-layout';
 
 export default function SanMiguelPage() {
   return (
     <BlogLayout
       category="water"
+      topIcon={
+        <Image
+          src="/images/san-miguel-icon.webp"
+          alt="The San Miguel Coin"
+          width={80}
+          height={80}
+          unoptimized
+          className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+          priority
+        />
+      }
       title="The San Miguel"
       imageSrc="/images/san-miguel.jpg"
       imageAlt="The San Miguel Spanish galleon battling colossal sea waves in a ferocious Atlantic storm"
