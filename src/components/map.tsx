@@ -294,8 +294,21 @@ const Map = () => {
           popupAnchor: [0, -32],
       });
 
+      const santaMariaIcon = L.divIcon({
+          html: `<img src="/images/santa-maria-icon.webp" alt="The Santa Maria" width="32" height="32" class="w-8 h-8 object-contain transition-transform group-hover:scale-110" />`,
+          className: 'bg-transparent border-0 group',
+          iconSize: [32, 32],
+          iconAnchor: [16, 32],
+          popupAnchor: [0, -32],
+      });
+
       treasures.forEach(treasure => {
-        const markerIcon = treasure.category === 'water' ? nauticalIcon : landIcon;
+        const isSantaMaria = treasure.id === '29' || treasure.name.toLowerCase().includes('santa maria');
+        const markerIcon = isSantaMaria
+          ? santaMariaIcon
+          : treasure.category === 'water'
+            ? nauticalIcon
+            : landIcon;
         const marker = L.marker(treasure.coords as L.LatLngExpression, { icon: markerIcon }).addTo(mapRef.current!);
         
         marker.on('popupopen', () => {

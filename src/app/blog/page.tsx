@@ -1,9 +1,20 @@
+import Image from 'next/image';
 import { BlogLayout, BlogSection, BlogList, BlogListItem } from '@/components/blog-layout';
 
 export default function BlogPage() {
   return (
     <BlogLayout
       category="water"
+      topIcon={
+        <Image
+          src="/images/santa-maria-icon.webp"
+          alt="The Santa Maria Coin"
+          width={80}
+          height={80}
+          className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+          priority
+        />
+      }
       title="The Santa Maria"
       imageSrc="/images/santa-maria.png"
       imageAlt="The Santa Maria Ship"
