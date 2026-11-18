@@ -1,9 +1,21 @@
+import Image from 'next/image';
 import { BlogLayout, BlogSection, BlogList, BlogListItem } from '@/components/blog-layout';
 
 export default function OakIslandPage() {
   return (
     <BlogLayout
       category="land"
+      topIcon={
+        <Image
+          src="/images/oak-island-icon.webp"
+          alt="Oak Island Money Pit Coin"
+          width={80}
+          height={80}
+          unoptimized
+          className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+          priority
+        />
+      }
       title="Oak Island Money Pit"
       imageSrc="/images/oak-island.jpg"
       imageAlt="Daniel McGinnis discovering the sunken depression and scarred oak branch of the Oak Island Money Pit in 1795"

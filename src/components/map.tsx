@@ -303,22 +303,23 @@ const Map = () => {
           popupAnchor: [0, -32],
         });
 
-      const santaMariaIcon = createCoinIcon('/images/santa-maria-icon.webp', 'The Santa Maria');
-      const montezumaIcon = createCoinIcon('/images/montezuma-icon.webp', "Montezuma's Treasure");
-      const lostDutchmanIcon = createCoinIcon('/images/lost-dutchman-icon.webp', "The Lost Dutchman's Gold Mine");
+      const coinIconsByMatcher = [
+        { id: '29', keyword: 'santa maria', icon: createCoinIcon('/images/santa-maria-icon.webp', 'The Santa Maria') },
+        { id: '22', keyword: 'montezuma', icon: createCoinIcon('/images/montezuma-icon.webp', "Montezuma's Treasure") },
+        { id: '7', keyword: 'dutchman', icon: createCoinIcon('/images/lost-dutchman-icon.webp', "The Lost Dutchman's Gold Mine") },
+        { id: '8', keyword: 'oak island', icon: createCoinIcon('/images/oak-island-icon.webp', 'Oak Island Money Pit') },
+      ];
 
       treasures.forEach(treasure => {
         const lowerName = treasure.name.toLowerCase();
-        const markerIcon =
-          treasure.id === '29' || lowerName.includes('santa maria')
-            ? santaMariaIcon
-            : treasure.id === '22' || lowerName.includes('montezuma')
-              ? montezumaIcon
-              : treasure.id === '7' || lowerName.includes('dutchman')
-                ? lostDutchmanIcon
-                : treasure.category === 'water'
-                  ? nauticalIcon
-                  : landIcon;
+        const customCoin = coinIconsByMatcher.find(
+          entry => treasure.id === entry.id || lowerName.includes(entry.keyword)
+        );
+        const markerIcon = customCoin
+          ? customCoin.icon
+          : treasure.category === 'water'
+            ? nauticalIcon
+            : landIcon;
         const marker = L.marker(treasure.coords as L.LatLngExpression, { icon: markerIcon }).addTo(mapRef.current!);
         
         marker.on('popupopen', () => {
