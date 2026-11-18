@@ -1,9 +1,21 @@
+import Image from 'next/image';
 import { BlogLayout, BlogSection, BlogList, BlogListItem } from '@/components/blog-layout';
 
 export default function MontezumaTreasurePage() {
   return (
     <BlogLayout
       category="water"
+      topIcon={
+        <Image
+          src="/images/montezuma-icon.webp"
+          alt="Montezuma's Treasure Coin"
+          width={80}
+          height={80}
+          unoptimized
+          className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+          priority
+        />
+      }
       title="Montezuma's Treasure"
       imageSrc="/images/montezuma-treasure.jpg"
       imageAlt="Montezuma's Aztec Gold Treasure Submerged in Lake Texcoco"

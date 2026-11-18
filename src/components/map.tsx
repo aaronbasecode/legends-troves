@@ -294,21 +294,28 @@ const Map = () => {
           popupAnchor: [0, -32],
       });
 
-      const santaMariaIcon = L.divIcon({
-          html: `<img src="/images/santa-maria-icon.webp" alt="The Santa Maria" width="32" height="32" class="w-8 h-8 object-contain transition-transform group-hover:scale-110" />`,
+      const createCoinIcon = (src: string, alt: string) =>
+        L.divIcon({
+          html: `<img src="${src}" alt="${alt}" width="32" height="32" class="w-8 h-8 object-contain transition-transform group-hover:scale-110" />`,
           className: 'bg-transparent border-0 group',
           iconSize: [32, 32],
           iconAnchor: [16, 32],
           popupAnchor: [0, -32],
-      });
+        });
+
+      const santaMariaIcon = createCoinIcon('/images/santa-maria-icon.webp', 'The Santa Maria');
+      const montezumaIcon = createCoinIcon('/images/montezuma-icon.webp', "Montezuma's Treasure");
 
       treasures.forEach(treasure => {
-        const isSantaMaria = treasure.id === '29' || treasure.name.toLowerCase().includes('santa maria');
-        const markerIcon = isSantaMaria
-          ? santaMariaIcon
-          : treasure.category === 'water'
-            ? nauticalIcon
-            : landIcon;
+        const lowerName = treasure.name.toLowerCase();
+        const markerIcon =
+          treasure.id === '29' || lowerName.includes('santa maria')
+            ? santaMariaIcon
+            : treasure.id === '22' || lowerName.includes('montezuma')
+              ? montezumaIcon
+              : treasure.category === 'water'
+                ? nauticalIcon
+                : landIcon;
         const marker = L.marker(treasure.coords as L.LatLngExpression, { icon: markerIcon }).addTo(mapRef.current!);
         
         marker.on('popupopen', () => {
