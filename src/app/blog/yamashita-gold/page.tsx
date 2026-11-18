@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { BlogLayout, BlogSection, BlogList, BlogListItem } from '@/components/blog-layout';
 
 export const metadata: Metadata = {
@@ -10,6 +11,17 @@ export default function YamashitaGoldPage() {
   return (
     <BlogLayout
       category="land"
+      topIcon={
+        <Image
+          src="/images/yamashita-gold-icon.webp"
+          alt="Yamashita's Gold Coin"
+          width={80}
+          height={80}
+          unoptimized
+          className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+          priority
+        />
+      }
       title="Yamashita's Gold"
       imageSrc="/images/yamashitas-gold.jpg?v=2"
       imageAlt="Inside a subterranean WWII Japanese bunker tunnel, a massive one-tonne golden Buddha statue surrounded by stacks of gold bullion bars, samurai swords, and human skeletal remains"

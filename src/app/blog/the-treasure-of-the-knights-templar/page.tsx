@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { BlogLayout, BlogSection, BlogList, BlogListItem } from '@/components/blog-layout';
 
 export const metadata: Metadata = {
@@ -10,6 +11,17 @@ export default function TreasureOfTheKnightsTemplarPage() {
   return (
     <BlogLayout
       category="land"
+      topIcon={
+        <Image
+          src="/images/knights-templar-icon.webp"
+          alt="The Treasure of the Knights Templar Coin"
+          width={80}
+          height={80}
+          unoptimized
+          className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+          priority
+        />
+      }
       title="The Treasure of the Knights Templar"
       imageSrc="/images/treasure-of-the-knights-templar.jpg"
       imageAlt="Knights Templar secretly loading wagons with their gold treasure and sacred relics outside the Temple of Paris in October 1307"

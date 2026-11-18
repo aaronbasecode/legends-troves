@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { BlogLayout, BlogSection, BlogList, BlogListItem } from '@/components/blog-layout';
 
 export const metadata: Metadata = {
@@ -10,6 +11,17 @@ export default function KingJohnsCrownJewelsPage() {
   return (
     <BlogLayout
       category="water"
+      topIcon={
+        <Image
+          src="/images/king-johns-crown-jewels-icon.webp"
+          alt="King John's Crown Jewels Coin"
+          width={80}
+          height={80}
+          unoptimized
+          className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+          priority
+        />
+      }
       title="King John's Crown Jewels"
       imageSrc="/images/king-johns-crown-jewels.jpg"
       imageAlt="King John's royal baggage train caught in the rising tides of The Wash estuary in 1216"

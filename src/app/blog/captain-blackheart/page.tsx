@@ -1,9 +1,21 @@
+import Image from 'next/image';
 import { BlogLayout, BlogSection, BlogList, BlogListItem } from '@/components/blog-layout';
 
 export default function CaptainBlackheartPage() {
   return (
     <BlogLayout
       category="land"
+      topIcon={
+        <Image
+          src="/images/captain-blackheart-icon.webp"
+          alt="The Lost Treasure of Captain Blackheart Coin"
+          width={80}
+          height={80}
+          unoptimized
+          className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+          priority
+        />
+      }
       title="The Lost Treasure of Captain Blackheart"
       imageSrc="/images/captain-blackheart.jpg"
       imageAlt="Captain Blackheart and his diverse pirate crew inspecting seized chests of gold escudos, Muzo emeralds, silver chalices, and pearls on deck with grappled ships alongside"

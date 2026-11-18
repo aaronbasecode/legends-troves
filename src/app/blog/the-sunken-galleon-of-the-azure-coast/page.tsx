@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { BlogLayout, BlogSection, BlogList, BlogListItem } from '@/components/blog-layout';
 
 export const metadata: Metadata = {
@@ -10,6 +11,17 @@ export default function SunkenGalleonAzureCoastPage() {
   return (
     <BlogLayout
       category="water"
+      topIcon={
+        <Image
+          src="/images/azure-coast-icon.webp"
+          alt="The Sunken Galleon of the Azure Coast Coin"
+          width={80}
+          height={80}
+          unoptimized
+          className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+          priority
+        />
+      }
       title="The Sunken Galleon of the Azure Coast"
       imageSrc="/images/the-sunken-galleon-of-the-azure-coast.jpg"
       imageAlt="A French coastal patrol frigate and lone Spanish galleon in a fierce nighttime artillery duel across rolling swells off the Îles d'Hyères"

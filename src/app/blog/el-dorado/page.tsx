@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { BlogLayout, BlogSection, BlogList, BlogListItem } from '@/components/blog-layout';
 
 export const metadata: Metadata = {
@@ -10,6 +11,17 @@ export default function ElDoradoPage() {
   return (
     <BlogLayout
       category="land"
+      topIcon={
+        <Image
+          src="/images/el-dorado-icon.webp"
+          alt="El Dorado Coin"
+          width={80}
+          height={80}
+          unoptimized
+          className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+          priority
+        />
+      }
       title="El Dorado, the Lost City of Gold"
       imageSrc="/images/the-el-dorado.jpg"
       imageAlt="El Dorado sacred coronation ritual with the Gilded Chieftain and priests on a ceremonial golden boat in Lake Guatavita"

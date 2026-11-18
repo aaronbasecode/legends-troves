@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { BlogLayout, BlogSection, BlogList, BlogListItem } from '@/components/blog-layout';
 
 export const metadata: Metadata = {
@@ -10,6 +11,17 @@ export default function TheWreckOfTheFlorDeLaMarPage() {
   return (
     <BlogLayout
       category="water"
+      topIcon={
+        <Image
+          src="/images/flor-de-la-mar-icon.webp"
+          alt="The Wreck of the Flor de la Mar Coin"
+          width={80}
+          height={80}
+          unoptimized
+          className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+          priority
+        />
+      }
       title="The Wreck of the Flor de la Mar"
       imageSrc="/images/the-wreck-of-the-flor-de-la-mar.jpg?v=3"
       imageAlt="Underwater wreckage of the Flor de la Mar broken on the seabed, surrounded by solid gold ceremonial lions, a jewel-encrusted throne, Ming porcelain, and mounds of minted gold coinage embedded in mud and sand"

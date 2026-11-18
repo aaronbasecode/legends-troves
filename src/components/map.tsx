@@ -304,18 +304,26 @@ const Map = () => {
         });
 
       const coinIconsByMatcher = [
-        { id: '29', keyword: 'santa maria', icon: createCoinIcon('/images/santa-maria-icon.webp', 'The Santa Maria') },
-        { id: '22', keyword: 'montezuma', icon: createCoinIcon('/images/montezuma-icon.webp', "Montezuma's Treasure") },
-        { id: '7', keyword: 'dutchman', icon: createCoinIcon('/images/lost-dutchman-icon.webp', "The Lost Dutchman's Gold Mine") },
-        { id: '8', keyword: 'oak island', icon: createCoinIcon('/images/oak-island-icon.webp', 'Oak Island Money Pit') },
-        { id: '32', keyword: 'san miguel', icon: createCoinIcon('/images/san-miguel-icon.webp', 'The San Miguel') },
-        { id: '10', keyword: 'lima', icon: createCoinIcon('/images/treasure-of-lima-icon.webp', 'The Treasure of Lima') },
+        { ids: ['1'], keyword: 'blackheart', icon: createCoinIcon('/images/captain-blackheart-icon.webp', 'The Lost Treasure of Captain Blackheart') },
+        { ids: ['2'], keyword: 'azure coast', icon: createCoinIcon('/images/azure-coast-icon.webp', 'The Sunken Galleon of the Azure Coast') },
+        { ids: ['3'], keyword: 'dorado', icon: createCoinIcon('/images/el-dorado-icon.webp', 'El Dorado, the Lost City of Gold') },
+        { ids: ['4'], keyword: 'amber', icon: createCoinIcon('/images/amber-room-icon.webp', 'The Amber Room') },
+        { ids: ['5', '33', '34'], keyword: 'yamashita', icon: createCoinIcon('/images/yamashita-gold-icon.webp', "Yamashita's Gold") },
+        { ids: ['6'], keyword: 'templar', icon: createCoinIcon('/images/knights-templar-icon.webp', 'The Treasure of the Knights Templar') },
+        { ids: ['7'], keyword: 'dutchman', icon: createCoinIcon('/images/lost-dutchman-icon.webp', "The Lost Dutchman's Gold Mine") },
+        { ids: ['8'], keyword: 'oak island', icon: createCoinIcon('/images/oak-island-icon.webp', 'Oak Island Money Pit') },
+        { ids: ['9'], keyword: 'flor de la mar', icon: createCoinIcon('/images/flor-de-la-mar-icon.webp', 'The Wreck of the Flor de la Mar') },
+        { ids: ['10'], keyword: 'lima', icon: createCoinIcon('/images/treasure-of-lima-icon.webp', 'The Treasure of Lima') },
+        { ids: ['12'], keyword: 'king john', icon: createCoinIcon('/images/king-johns-crown-jewels-icon.webp', "King John's Crown Jewels") },
+        { ids: ['22'], keyword: 'montezuma', icon: createCoinIcon('/images/montezuma-icon.webp', "Montezuma's Treasure") },
+        { ids: ['29'], keyword: 'santa maria', icon: createCoinIcon('/images/santa-maria-icon.webp', 'The Santa Maria') },
+        { ids: ['32'], keyword: 'san miguel', icon: createCoinIcon('/images/san-miguel-icon.webp', 'The San Miguel') },
       ];
 
       treasures.forEach(treasure => {
         const lowerName = treasure.name.toLowerCase();
         const customCoin = coinIconsByMatcher.find(
-          entry => treasure.id === entry.id || lowerName.includes(entry.keyword)
+          entry => entry.ids.includes(treasure.id) || lowerName.includes(entry.keyword)
         );
         const markerIcon = customCoin
           ? customCoin.icon
