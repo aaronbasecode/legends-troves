@@ -11,6 +11,7 @@ export default function BlogPage() {
           alt="The Santa Maria Coin"
           width={80}
           height={80}
+          unoptimized
           className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
           priority
         />
