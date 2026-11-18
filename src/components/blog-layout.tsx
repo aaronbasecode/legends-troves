@@ -103,7 +103,7 @@ export function BlogLayout({
   );
 
   return (
-    <div className="min-h-screen bg-[#F4EBD0] text-[#2C2504]">
+    <div className="min-h-screen bg-parchment text-[#2C2504]">
       <Header />
       
       <main className="pt-20 sm:pt-24 pb-12 sm:pb-16 px-4 sm:px-6 flex flex-col items-center">

@@ -37,7 +37,7 @@ export default function YamashitaTreasurePage() {
       </section>
 
       {/* Bottom Section: Cream / Parchment with Photos of the Project Sites */}
-      <section className="bg-[#F1EAD0] text-[#302503] flex-1 flex flex-col items-center justify-start pt-[5rem] pb-20 sm:pb-28 px-4 sm:px-6 text-center">
+      <section className="bg-parchment text-[#302503] flex-1 flex flex-col items-center justify-start pt-[5rem] pb-20 sm:pb-28 px-4 sm:px-6 text-center">
         <div className="w-full max-w-[800px] mx-auto flex flex-col items-center">
           {/* Section Title */}
           <h2 className="font-gothic text-3xl sm:text-4xl md:text-5xl lg:text-[46px] font-bold text-[#302503] tracking-wide leading-tight mb-12 sm:mb-16">
