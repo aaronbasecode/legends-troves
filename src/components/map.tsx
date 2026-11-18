@@ -305,6 +305,7 @@ const Map = () => {
 
       const santaMariaIcon = createCoinIcon('/images/santa-maria-icon.webp', 'The Santa Maria');
       const montezumaIcon = createCoinIcon('/images/montezuma-icon.webp', "Montezuma's Treasure");
+      const lostDutchmanIcon = createCoinIcon('/images/lost-dutchman-icon.webp', "The Lost Dutchman's Gold Mine");
 
       treasures.forEach(treasure => {
         const lowerName = treasure.name.toLowerCase();
@@ -313,9 +314,11 @@ const Map = () => {
             ? santaMariaIcon
             : treasure.id === '22' || lowerName.includes('montezuma')
               ? montezumaIcon
-              : treasure.category === 'water'
-                ? nauticalIcon
-                : landIcon;
+              : treasure.id === '7' || lowerName.includes('dutchman')
+                ? lostDutchmanIcon
+                : treasure.category === 'water'
+                  ? nauticalIcon
+                  : landIcon;
         const marker = L.marker(treasure.coords as L.LatLngExpression, { icon: markerIcon }).addTo(mapRef.current!);
         
         marker.on('popupopen', () => {

@@ -1,9 +1,21 @@
+import Image from 'next/image';
 import { BlogLayout, BlogSection, BlogList, BlogListItem } from '@/components/blog-layout';
 
 export default function LostDutchmanPage() {
   return (
     <BlogLayout
       category="land"
+      topIcon={
+        <Image
+          src="/images/lost-dutchman-icon.webp"
+          alt="The Lost Dutchman's Gold Mine Coin"
+          width={80}
+          height={80}
+          unoptimized
+          className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+          priority
+        />
+      }
       title="The Lost Dutchman's Gold Mine"
       imageSrc="/images/lost-dutchman.jpg"
       imageAlt="First-person view looking through a rock crack into the hidden gold treasure cave of the Lost Dutchman's Mine"
