@@ -131,34 +131,32 @@ const TreasurePopup = ({ treasure }: { treasure: Treasure }) => {
   const url = getTreasureUrl(treasure.id, treasure.name);
 
   return (
-    <div className="w-[300px] sm:w-[330px] max-w-[calc(100vw-32px)] bg-[#302503] rounded-[14px] p-5 sm:p-6 text-left border-none shadow-xl flex flex-col">
-      <h3 className="font-germania font-normal text-[20px] text-white leading-[1.25] mb-3 outline-none border-none [text-shadow:none] [-webkit-text-stroke:0] antialiased">
+    <div className="w-[300px] sm:w-[330px] max-w-[calc(100vw-32px)] bg-parchment rounded-none p-5 sm:p-6 text-left border-none shadow-xl flex flex-col">
+      <h3 className="font-germania font-normal text-[20px] text-[#2c2504] leading-[1.25] mb-3 outline-none border-none [text-shadow:none] [-webkit-text-stroke:0] antialiased">
         {treasure.name}
       </h3>
       <div className="flex flex-col gap-[5px]">
-        <p className="text-[16px] text-white/90 leading-[1.38]">
+        <p className="text-[16px] text-[#2c2504e6] leading-[1.38]">
           {treasure.description}
         </p>
-        <p className="text-[14px] text-white/80 leading-normal">
+        <p className="text-[14px] text-[#2c2504e6] leading-normal">
           {treasure.location}
         </p>
         <div className="text-left">
           {url ? (
             <a 
               href={url} 
-              className="inline-flex items-center text-[16px] font-semibold !text-[#d8ae31] hover:!text-[#e8be3e] transition-colors group"
-              style={{ color: '#d8ae31' }}
+              className="popup-link inline-flex items-center text-[16px] font-semibold text-[#2c2504] hover:underline transition-colors group"
             >
-              <span style={{ color: '#d8ae31' }}>Learn more</span>
-              <ArrowRight className="w-4 h-4 ml-1.5 transition-transform group-hover:translate-x-1 !text-[#d8ae31]" style={{ color: '#d8ae31' }} />
+              <span>Learn more</span>
+              <ArrowRight className="w-4 h-4 ml-1.5 transition-transform group-hover:translate-x-1" />
             </a>
           ) : (
             <span 
-              className="inline-flex items-center text-[16px] font-semibold !text-[#d8ae31] cursor-default select-none"
-              style={{ color: '#d8ae31' }}
+              className="inline-flex items-center text-[16px] font-semibold text-[#2c2504] cursor-default select-none"
             >
-              <span style={{ color: '#d8ae31' }}>Learn more</span>
-              <ArrowRight className="w-4 h-4 ml-1.5 !text-[#d8ae31]" style={{ color: '#d8ae31' }} />
+              <span>Learn more</span>
+              <ArrowRight className="w-4 h-4 ml-1.5" />
             </span>
           )}
         </div>
