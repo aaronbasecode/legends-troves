@@ -178,33 +178,33 @@ body {
   background-size: 760px 760px, 430px 430px, 230px 230px, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
 }
 
-/* Dark brown crumpled parchment texture for header and dark hero sections */
+/* Dark brown crumpled paper texture (high-contrast raking-light turbulence folds + paper grain) */
 .bg-dark-parchment {
-  background-color: #302503;
+  background-color: #2e2304;
   background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='760' height='760'%3E%3Cfilter id='dw'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.005 0.0065' numOctaves='4' seed='11' stitchTiles='stitch' result='t'/%3E%3CfeDiffuseLighting in='t' lighting-color='%235a460b' surfaceScale='1.8'%3E%3CfeDistantLight azimuth='125' elevation='58'/%3E%3C/feDiffuseLighting%3E%3C/filter%3E%3Crect width='760' height='760' filter='url(%23dw)' opacity='0.3'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='430' height='430'%3E%3Cfilter id='dc'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.01 0.012' numOctaves='3' seed='23' stitchTiles='stitch' result='t'/%3E%3CfeDiffuseLighting in='t' lighting-color='%234f3d09' surfaceScale='1.6'%3E%3CfeDistantLight azimuth='35' elevation='60'/%3E%3C/feDiffuseLighting%3E%3C/filter%3E%3Crect width='430' height='430' filter='url(%23dc)' opacity='0.22'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='230' height='230'%3E%3Cfilter id='dg'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.055' numOctaves='4' stitchTiles='stitch' result='n'/%3E%3CfeDiffuseLighting in='n' lighting-color='%2366500e' surfaceScale='1.3'%3E%3CfeDistantLight azimuth='50' elevation='62'/%3E%3C/feDiffuseLighting%3E%3C/filter%3E%3Crect width='230' height='230' filter='url(%23dg)' opacity='0.18'/%3E%3C/svg%3E"),
-    radial-gradient(ellipse at 18% 25%, rgba(88, 68, 12, 0.2) 0%, transparent 55%),
-    radial-gradient(ellipse at 82% 70%, rgba(20, 14, 2, 0.28) 0%, transparent 52%),
-    radial-gradient(ellipse at 50% 50%, rgba(72, 55, 8, 0.14) 0%, rgba(18, 13, 2, 0.25) 100%);
-  background-repeat: repeat, repeat, repeat, no-repeat, no-repeat, no-repeat;
-  background-size: 760px 760px, 430px 430px, 230px 230px, 100% 100%, 100% 100%, 100% 100%;
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='360'%3E%3Cfilter id='dc'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.014 0.018' numOctaves='4' seed='7' stitchTiles='stitch' result='t'/%3E%3CfeDiffuseLighting in='t' lighting-color='%238c6e1c' surfaceScale='5.2'%3E%3CfeDistantLight azimuth='130' elevation='34'/%3E%3C/feDiffuseLighting%3E%3C/filter%3E%3Crect width='360' height='360' filter='url(%23dc)' opacity='0.52'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='520'%3E%3Cfilter id='dw'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.007 0.009' numOctaves='3' seed='19' stitchTiles='stitch' result='t'/%3E%3CfeDiffuseLighting in='t' lighting-color='%23785d14' surfaceScale='4.4'%3E%3CfeDistantLight azimuth='40' elevation='38'/%3E%3C/feDiffuseLighting%3E%3C/filter%3E%3Crect width='520' height='520' filter='url(%23dw)' opacity='0.38'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='dg'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.06' numOctaves='4' stitchTiles='stitch' result='n'/%3E%3CfeDiffuseLighting in='n' lighting-color='%23997922' surfaceScale='2.2'%3E%3CfeDistantLight azimuth='55' elevation='48'/%3E%3C/feDiffuseLighting%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23dg)' opacity='0.28'/%3E%3C/svg%3E"),
+    radial-gradient(ellipse at 20% 25%, rgba(102, 78, 16, 0.25) 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 72%, rgba(14, 10, 1, 0.35) 0%, transparent 55%);
+  background-repeat: repeat, repeat, repeat, no-repeat, no-repeat;
+  background-size: 360px 360px, 520px 520px, 220px 220px, 100% 100%, 100% 100%;
 }
 
-/* Fine, non-uniform ragged bottom edge matching the map parchment cards */
+/* Fine, small non-uniform torn-paper bottom edge (exact micro-ragged scale as map cards) */
 .ragged-bottom {
-  clip-path: polygon(
-    0% 0%, 100% 0%, 100% calc(100% - 2px),
-    97.4% calc(100% - 1px), 94.8% calc(100% - 3px), 91.5% 100%, 88.2% calc(100% - 2px),
-    85.7% calc(100% - 5px), 84.1% calc(100% - 2px), 80.3% calc(100% - 1px), 76.8% calc(100% - 3px),
-    72.4% 100%, 69.1% calc(100% - 2px), 65.5% calc(100% - 4px), 63.8% calc(100% - 1px),
-    59.2% calc(100% - 2px), 55.6% 100%, 51.9% calc(100% - 3px), 47.4% calc(100% - 1px),
-    44.0% calc(100% - 5px), 42.3% calc(100% - 2px), 38.7% calc(100% - 1px), 34.9% calc(100% - 3px),
-    30.2% 100%, 26.8% calc(100% - 2px), 22.5% calc(100% - 4px), 19.6% calc(100% - 1px),
-    15.3% calc(100% - 2px), 11.8% calc(100% - 5px), 10.1% calc(100% - 2px), 6.4% 100%,
-    3.1% calc(100% - 3px), 0% calc(100% - 1px)
-  );
+  -webkit-mask-image:
+    linear-gradient(#000, #000),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='4' preserveAspectRatio='none'%3E%3Cpolygon fill='%23000' points='0,0 360,0 360,2.6 354,1.9 349,3.1 342,2.2 337,1.4 331,2.8 324,3.7 319,2.1 312,1.6 306,2.9 299,3.4 294,1.8 287,2.5 281,0.9 276,2.3 269,3.2 262,2.0 256,1.5 249,2.8 243,3.8 237,2.2 230,1.7 224,2.6 217,3.3 211,1.9 204,2.7 198,1.1 192,2.4 185,3.5 178,2.1 172,1.5 165,2.9 159,3.6 153,2.0 146,1.6 140,2.8 133,3.3 127,1.8 120,2.5 114,0.8 108,2.2 101,3.4 94,2.0 88,1.6 81,2.9 75,3.7 69,2.1 62,1.7 56,2.7 49,3.3 43,1.8 36,2.6 30,1.2 24,2.4 17,3.5 10,2.1 4,1.7 0,2.6'/%3E%3C/svg%3E");
+  -webkit-mask-position: top left, bottom left;
+  -webkit-mask-size: 100% calc(100% - 3px), 360px 4px;
+  -webkit-mask-repeat: no-repeat, repeat-x;
+  mask-image:
+    linear-gradient(#000, #000),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='4' preserveAspectRatio='none'%3E%3Cpolygon fill='%23000' points='0,0 360,0 360,2.6 354,1.9 349,3.1 342,2.2 337,1.4 331,2.8 324,3.7 319,2.1 312,1.6 306,2.9 299,3.4 294,1.8 287,2.5 281,0.9 276,2.3 269,3.2 262,2.0 256,1.5 249,2.8 243,3.8 237,2.2 230,1.7 224,2.6 217,3.3 211,1.9 204,2.7 198,1.1 192,2.4 185,3.5 178,2.1 172,1.5 165,2.9 159,3.6 153,2.0 146,1.6 140,2.8 133,3.3 127,1.8 120,2.5 114,0.8 108,2.2 101,3.4 94,2.0 88,1.6 81,2.9 75,3.7 69,2.1 62,1.7 56,2.7 49,3.3 43,1.8 36,2.6 30,1.2 24,2.4 17,3.5 10,2.1 4,1.7 0,2.6'/%3E%3C/svg%3E");
+  mask-position: top left, bottom left;
+  mask-size: 100% calc(100% - 3px), 360px 4px;
+  mask-repeat: no-repeat, repeat-x;
 }
 
 /* Ragged deckle-edged torn parchment card (fine, non-uniform organic edge) */
