@@ -178,17 +178,15 @@ body {
   background-size: 760px 760px, 430px 430px, 230px 230px, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
 }
 
-/* Dark brown crumpled paper texture (seamless full-bleed turbulence, deep dark brown with obvious creases) */
+/* Dark brown textured background using uploaded texture with dark brown branding overlay */
 .bg-dark-parchment {
   background-color: #211802;
   background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600' preserveAspectRatio='none'%3E%3Cfilter id='dc'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.011 0.017' numOctaves='4' seed='7' result='t'/%3E%3CfeDiffuseLighting in='t' lighting-color='%2354400a' surfaceScale='5.5'%3E%3CfeDistantLight azimuth='128' elevation='30'/%3E%3C/feDiffuseLighting%3E%3C/filter%3E%3Crect width='1200' height='600' filter='url(%23dc)' opacity='0.52'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600' preserveAspectRatio='none'%3E%3Cfilter id='dw'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.005 0.008' numOctaves='3' seed='29' result='t'/%3E%3CfeDiffuseLighting in='t' lighting-color='%23473608' surfaceScale='4.2'%3E%3CfeDistantLight azimuth='38' elevation='34'/%3E%3C/feDiffuseLighting%3E%3C/filter%3E%3Crect width='1200' height='600' filter='url(%23dw)' opacity='0.36'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='dg'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.065' numOctaves='4' stitchTiles='stitch' result='n'/%3E%3CfeDiffuseLighting in='n' lighting-color='%2359450d' surfaceScale='1.8'%3E%3CfeDistantLight azimuth='55' elevation='45'/%3E%3C/feDiffuseLighting%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23dg)' opacity='0.22'/%3E%3C/svg%3E"),
-    radial-gradient(ellipse at 22% 30%, rgba(72, 54, 10, 0.18) 0%, transparent 55%),
-    radial-gradient(ellipse at 78% 72%, rgba(10, 7, 1, 0.45) 0%, transparent 58%);
-  background-repeat: no-repeat, no-repeat, repeat, no-repeat, no-repeat;
-  background-size: 100% 100%, 100% 100%, 240px 240px, 100% 100%, 100% 100%;
+    linear-gradient(rgba(44, 34, 6, 0.74), rgba(28, 20, 2, 0.80)),
+    url('/images/dark-parchment-bg.webp');
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100% 100%, cover;
+  background-position: center, center;
 }
 
 /* Detailed, non-uniform fibrous torn-paper bottom edge (SVG multi-octave displacement mask, <700B) */
