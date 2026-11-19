@@ -24,8 +24,9 @@ export default function PadmanabhaswamyTempleVaultBPage() {
       }
       title={
         <>
-          Padmanabhaswamy Temple <br className="hidden sm:inline" />
-          <span className="whitespace-nowrap">Vault B</span>
+          Padmanabhaswamy Temple
+          <br />
+          <span className="whitespace-nowrap">Vault&nbsp;B</span>
         </>
       }
       imageSrc="/images/padmanabhaswamy-vault-b.jpg"
