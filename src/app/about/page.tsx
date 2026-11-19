@@ -36,28 +36,33 @@ export default function AboutPage() {
             {/* Left Column: Two stacked cards */}
             <div className="flex flex-col gap-5">
               {/* Card 1: Our Mission */}
-              <section className="bg-[#D8D1B6] rounded-[14px] p-6 sm:p-7 shadow-sm flex flex-col">
-                <h2 className="font-gothic text-[30px] font-bold text-[#2C2504] mb-3 leading-tight">
-                  Our Mission
-                </h2>
-                <p className="text-[18px] leading-relaxed text-[#2C2504] font-normal">
-                  We started Legends Troves to turn historical research into something you can actually explore. Throughout time, so many ships have been swallowed by the sea and fortunes buried out in the middle of nowhere. We pull together old maritime maps, historical records, and expedition logs to map out these lost sites and bring their stories back to life.
-                </p>
-              </section>
+              <div className="drop-shadow-[0_10px_20px_rgba(44,37,4,0.28)]">
+                <section className="bg-parchment parchment-card rounded-none p-6 sm:p-7 flex flex-col">
+                  <h2 className="font-gothic text-[30px] font-bold text-[#2C2504] mb-3 leading-tight">
+                    Our Mission
+                  </h2>
+                  <p className="text-[18px] leading-relaxed text-[#2C2504] font-normal">
+                    We started Legends Troves to turn historical research into something you can actually explore. Throughout time, so many ships have been swallowed by the sea and fortunes buried out in the middle of nowhere. We pull together old maritime maps, historical records, and expedition logs to map out these lost sites and bring their stories back to life.
+                  </p>
+                </section>
+              </div>
 
               {/* Card 2: Built for Treasure Hunters, Explorers & History Enthusiasts */}
-              <section className="bg-[#D8D1B6] rounded-[14px] p-6 sm:p-7 shadow-sm flex flex-col flex-1">
-                <h2 className="font-gothic text-[30px] font-bold text-[#2C2504] mb-3 leading-[34px]">
-                  Built for Treasure Hunters, Explorers &amp; History Enthusiasts
-                </h2>
-                <p className="text-[18px] leading-relaxed text-[#2C2504] font-normal">
-                  Whether you&apos;re a history buff, an armchair explorer, or a seasoned treasure hunter out in the field, we built Legends Troves for you. It&apos;s a place to dig into the actual facts and lingering mysteries behind the world&apos;s greatest lost fortunes.
-                </p>
-              </section>
+              <div className="drop-shadow-[0_10px_20px_rgba(44,37,4,0.28)] flex flex-col flex-1">
+                <section className="bg-parchment parchment-card rounded-none p-6 sm:p-7 flex flex-col flex-1">
+                  <h2 className="font-gothic text-[30px] font-bold text-[#2C2504] mb-3 leading-[34px]">
+                    Built for Treasure Hunters, Explorers &amp; History Enthusiasts
+                  </h2>
+                  <p className="text-[18px] leading-relaxed text-[#2C2504] font-normal">
+                    Whether you&apos;re a history buff, an armchair explorer, or a seasoned treasure hunter out in the field, we built Legends Troves for you. It&apos;s a place to dig into the actual facts and lingering mysteries behind the world&apos;s greatest lost fortunes.
+                  </p>
+                </section>
+              </div>
             </div>
 
             {/* Right Column: What You Can Explore */}
-            <section className="bg-[#D8D1B6] rounded-[14px] p-6 sm:p-7 shadow-sm flex flex-col justify-between">
+            <div className="drop-shadow-[0_10px_20px_rgba(44,37,4,0.28)] flex flex-col">
+              <section className="bg-parchment parchment-card rounded-none p-6 sm:p-7 flex flex-col flex-1 justify-between">
               <div>
                 <h2 className="font-gothic text-[30px] font-bold text-[#2C2504] mb-5 leading-tight">
                   What You Can Explore
@@ -99,6 +104,7 @@ export default function AboutPage() {
                 </div>
               </div>
             </section>
+            </div>
           </div>
 
           {/* Disclaimer */}
