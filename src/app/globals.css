@@ -178,33 +178,33 @@ body {
   background-size: 760px 760px, 430px 430px, 230px 230px, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
 }
 
-/* Dark brown crumpled paper texture (high-contrast raking-light turbulence folds + paper grain) */
+/* Dark brown crumpled paper texture (seamless full-bleed turbulence, deep dark brown with obvious creases) */
 .bg-dark-parchment {
-  background-color: #2e2304;
+  background-color: #211802;
   background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='360'%3E%3Cfilter id='dc'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.014 0.018' numOctaves='4' seed='7' stitchTiles='stitch' result='t'/%3E%3CfeDiffuseLighting in='t' lighting-color='%238c6e1c' surfaceScale='5.2'%3E%3CfeDistantLight azimuth='130' elevation='34'/%3E%3C/feDiffuseLighting%3E%3C/filter%3E%3Crect width='360' height='360' filter='url(%23dc)' opacity='0.52'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='520'%3E%3Cfilter id='dw'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.007 0.009' numOctaves='3' seed='19' stitchTiles='stitch' result='t'/%3E%3CfeDiffuseLighting in='t' lighting-color='%23785d14' surfaceScale='4.4'%3E%3CfeDistantLight azimuth='40' elevation='38'/%3E%3C/feDiffuseLighting%3E%3C/filter%3E%3Crect width='520' height='520' filter='url(%23dw)' opacity='0.38'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='dg'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.06' numOctaves='4' stitchTiles='stitch' result='n'/%3E%3CfeDiffuseLighting in='n' lighting-color='%23997922' surfaceScale='2.2'%3E%3CfeDistantLight azimuth='55' elevation='48'/%3E%3C/feDiffuseLighting%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23dg)' opacity='0.28'/%3E%3C/svg%3E"),
-    radial-gradient(ellipse at 20% 25%, rgba(102, 78, 16, 0.25) 0%, transparent 55%),
-    radial-gradient(ellipse at 80% 72%, rgba(14, 10, 1, 0.35) 0%, transparent 55%);
-  background-repeat: repeat, repeat, repeat, no-repeat, no-repeat;
-  background-size: 360px 360px, 520px 520px, 220px 220px, 100% 100%, 100% 100%;
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600' preserveAspectRatio='none'%3E%3Cfilter id='dc'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.011 0.017' numOctaves='4' seed='7' result='t'/%3E%3CfeDiffuseLighting in='t' lighting-color='%2354400a' surfaceScale='5.5'%3E%3CfeDistantLight azimuth='128' elevation='30'/%3E%3C/feDiffuseLighting%3E%3C/filter%3E%3Crect width='1200' height='600' filter='url(%23dc)' opacity='0.52'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600' preserveAspectRatio='none'%3E%3Cfilter id='dw'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.005 0.008' numOctaves='3' seed='29' result='t'/%3E%3CfeDiffuseLighting in='t' lighting-color='%23473608' surfaceScale='4.2'%3E%3CfeDistantLight azimuth='38' elevation='34'/%3E%3C/feDiffuseLighting%3E%3C/filter%3E%3Crect width='1200' height='600' filter='url(%23dw)' opacity='0.36'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='dg'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.065' numOctaves='4' stitchTiles='stitch' result='n'/%3E%3CfeDiffuseLighting in='n' lighting-color='%2359450d' surfaceScale='1.8'%3E%3CfeDistantLight azimuth='55' elevation='45'/%3E%3C/feDiffuseLighting%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23dg)' opacity='0.22'/%3E%3C/svg%3E"),
+    radial-gradient(ellipse at 22% 30%, rgba(72, 54, 10, 0.18) 0%, transparent 55%),
+    radial-gradient(ellipse at 78% 72%, rgba(10, 7, 1, 0.45) 0%, transparent 58%);
+  background-repeat: no-repeat, no-repeat, repeat, no-repeat, no-repeat;
+  background-size: 100% 100%, 100% 100%, 240px 240px, 100% 100%, 100% 100%;
 }
 
-/* Fine, small non-uniform torn-paper bottom edge (exact micro-ragged scale as map cards) */
+/* Fine, small non-uniform torn-paper bottom edge (full-width non-repeating SVG mask) */
 .ragged-bottom {
   -webkit-mask-image:
     linear-gradient(#000, #000),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='4' preserveAspectRatio='none'%3E%3Cpolygon fill='%23000' points='0,0 360,0 360,2.6 354,1.9 349,3.1 342,2.2 337,1.4 331,2.8 324,3.7 319,2.1 312,1.6 306,2.9 299,3.4 294,1.8 287,2.5 281,0.9 276,2.3 269,3.2 262,2.0 256,1.5 249,2.8 243,3.8 237,2.2 230,1.7 224,2.6 217,3.3 211,1.9 204,2.7 198,1.1 192,2.4 185,3.5 178,2.1 172,1.5 165,2.9 159,3.6 153,2.0 146,1.6 140,2.8 133,3.3 127,1.8 120,2.5 114,0.8 108,2.2 101,3.4 94,2.0 88,1.6 81,2.9 75,3.7 69,2.1 62,1.7 56,2.7 49,3.3 43,1.8 36,2.6 30,1.2 24,2.4 17,3.5 10,2.1 4,1.7 0,2.6'/%3E%3C/svg%3E");
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 4' preserveAspectRatio='none'%3E%3Cpolygon fill='%23000' points='0,0 1440,0 1440,2.4 1432,1.8 1425,2.9 1413,2.1 1406,1.3 1397,2.6 1384,3.4 1378,1.9 1365,2.3 1359,0.9 1351,2.5 1338,3.1 1327,1.7 1316,2.4 1304,3.6 1296,2.0 1283,1.5 1274,2.8 1261,2.1 1249,3.3 1241,1.6 1228,2.2 1219,0.7 1212,2.4 1198,3.2 1186,1.9 1173,2.6 1162,1.4 1151,2.9 1139,3.5 1129,2.0 1115,1.6 1104,2.5 1091,3.1 1083,1.8 1069,2.4 1058,1.0 1050,2.6 1036,3.4 1024,2.1 1011,1.5 999,2.7 987,3.6 978,1.9 964,2.3 952,1.4 941,2.8 928,3.2 917,1.8 903,2.5 894,0.8 886,2.2 872,3.3 859,2.0 847,1.6 835,2.9 823,3.5 813,1.9 799,2.4 786,1.3 775,2.7 762,3.1 751,1.7 738,2.5 729,0.9 721,2.3 707,3.4 694,2.1 681,1.5 669,2.8 657,3.6 648,1.8 634,2.4 621,1.4 610,2.7 597,3.2 586,1.9 573,2.5 564,0.7 556,2.3 542,3.3 529,2.0 516,1.6 504,2.9 492,3.5 483,1.8 469,2.4 456,1.3 445,2.6 432,3.2 421,1.7 408,2.5 399,1.0 391,2.3 377,3.4 364,2.0 351,1.5 339,2.8 327,3.6 318,1.9 304,2.4 291,1.4 280,2.7 267,3.1 256,1.8 243,2.5 234,0.8 226,2.2 212,3.3 199,2.1 186,1.6 174,2.9 162,3.5 153,1.9 139,2.4 126,1.3 115,2.7 102,3.2 91,1.8 78,2.5 69,0.9 61,2.3 47,3.4 34,2.0 21,1.6 9,2.8 0,2.2'/%3E%3C/svg%3E");
   -webkit-mask-position: top left, bottom left;
-  -webkit-mask-size: 100% calc(100% - 3px), 360px 4px;
-  -webkit-mask-repeat: no-repeat, repeat-x;
+  -webkit-mask-size: 100% calc(100% - 3px), 100% 4px;
+  -webkit-mask-repeat: no-repeat, no-repeat;
   mask-image:
     linear-gradient(#000, #000),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='4' preserveAspectRatio='none'%3E%3Cpolygon fill='%23000' points='0,0 360,0 360,2.6 354,1.9 349,3.1 342,2.2 337,1.4 331,2.8 324,3.7 319,2.1 312,1.6 306,2.9 299,3.4 294,1.8 287,2.5 281,0.9 276,2.3 269,3.2 262,2.0 256,1.5 249,2.8 243,3.8 237,2.2 230,1.7 224,2.6 217,3.3 211,1.9 204,2.7 198,1.1 192,2.4 185,3.5 178,2.1 172,1.5 165,2.9 159,3.6 153,2.0 146,1.6 140,2.8 133,3.3 127,1.8 120,2.5 114,0.8 108,2.2 101,3.4 94,2.0 88,1.6 81,2.9 75,3.7 69,2.1 62,1.7 56,2.7 49,3.3 43,1.8 36,2.6 30,1.2 24,2.4 17,3.5 10,2.1 4,1.7 0,2.6'/%3E%3C/svg%3E");
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 4' preserveAspectRatio='none'%3E%3Cpolygon fill='%23000' points='0,0 1440,0 1440,2.4 1432,1.8 1425,2.9 1413,2.1 1406,1.3 1397,2.6 1384,3.4 1378,1.9 1365,2.3 1359,0.9 1351,2.5 1338,3.1 1327,1.7 1316,2.4 1304,3.6 1296,2.0 1283,1.5 1274,2.8 1261,2.1 1249,3.3 1241,1.6 1228,2.2 1219,0.7 1212,2.4 1198,3.2 1186,1.9 1173,2.6 1162,1.4 1151,2.9 1139,3.5 1129,2.0 1115,1.6 1104,2.5 1091,3.1 1083,1.8 1069,2.4 1058,1.0 1050,2.6 1036,3.4 1024,2.1 1011,1.5 999,2.7 987,3.6 978,1.9 964,2.3 952,1.4 941,2.8 928,3.2 917,1.8 903,2.5 894,0.8 886,2.2 872,3.3 859,2.0 847,1.6 835,2.9 823,3.5 813,1.9 799,2.4 786,1.3 775,2.7 762,3.1 751,1.7 738,2.5 729,0.9 721,2.3 707,3.4 694,2.1 681,1.5 669,2.8 657,3.6 648,1.8 634,2.4 621,1.4 610,2.7 597,3.2 586,1.9 573,2.5 564,0.7 556,2.3 542,3.3 529,2.0 516,1.6 504,2.9 492,3.5 483,1.8 469,2.4 456,1.3 445,2.6 432,3.2 421,1.7 408,2.5 399,1.0 391,2.3 377,3.4 364,2.0 351,1.5 339,2.8 327,3.6 318,1.9 304,2.4 291,1.4 280,2.7 267,3.1 256,1.8 243,2.5 234,0.8 226,2.2 212,3.3 199,2.1 186,1.6 174,2.9 162,3.5 153,1.9 139,2.4 126,1.3 115,2.7 102,3.2 91,1.8 78,2.5 69,0.9 61,2.3 47,3.4 34,2.0 21,1.6 9,2.8 0,2.2'/%3E%3C/svg%3E");
   mask-position: top left, bottom left;
-  mask-size: 100% calc(100% - 3px), 360px 4px;
-  mask-repeat: no-repeat, repeat-x;
+  mask-size: 100% calc(100% - 3px), 100% 4px;
+  mask-repeat: no-repeat, no-repeat;
 }
 
 /* Ragged deckle-edged torn parchment card (fine, non-uniform organic edge) */
