@@ -131,7 +131,7 @@ const TreasurePopup = ({ treasure }: { treasure: Treasure }) => {
   const url = getTreasureUrl(treasure.id, treasure.name);
 
   return (
-    <div className="w-[300px] sm:w-[330px] max-w-[calc(100vw-32px)] bg-parchment rounded-none p-5 sm:p-6 text-left border-none shadow-xl flex flex-col">
+    <div className="w-[300px] sm:w-[330px] max-w-[calc(100vw-32px)] bg-parchment parchment-card rounded-none p-5 sm:p-6 text-left border-none flex flex-col">
       <h3 className="font-germania font-normal text-[20px] text-[#2c2504] leading-[1.25] mb-3 outline-none border-none [text-shadow:none] [-webkit-text-stroke:0] antialiased">
         {treasure.name}
       </h3>
