@@ -326,8 +326,13 @@ const Map = () => {
         { ids: ['22'], keyword: 'montezuma', icon: createCoinIcon('/images/montezuma-icon.webp', "Montezuma's Treasure") },
         { ids: ['23'], keyword: 'joao', icon: createCoinIcon('/images/sao-joao-icon.webp', 'The Wreck of the São João') },
         { ids: ['24'], keyword: 'genghis', icon: createCoinIcon('/images/genghis-khan-icon.webp', 'The Lost Tomb of Genghis Khan') },
+        { ids: ['25'], keyword: 'bactria', icon: createCoinIcon('/images/bactria-icon.webp', 'The Lost Hoard of Bactria') },
         { ids: ['26'], keyword: 'issyk', icon: createCoinIcon('/images/issyk-kul-icon.webp', 'The Sunken Treasure of Issyk-Kul') },
+        { ids: ['27'], keyword: 'otrar', icon: createCoinIcon('/images/otrar-library-icon.webp', 'The Secret Library of Otrar') },
+        { ids: ['28'], keyword: 'merchant royal', icon: createCoinIcon('/images/merchant-royal-icon.webp', 'The Merchant Royal') },
         { ids: ['29'], keyword: 'santa maria', icon: createCoinIcon('/images/santa-maria-icon.webp', 'The Santa Maria') },
+        { ids: ['30'], keyword: 'awa maru', icon: createCoinIcon('/images/awa-maru-icon.webp', 'The Awa Maru') },
+        { ids: ['31'], keyword: 'concepcion', icon: createCoinIcon('/images/concepcion-icon.webp', 'The Nuestra Señora de la Concepción') },
         { ids: ['32'], keyword: 'san miguel', icon: createCoinIcon('/images/san-miguel-icon.webp', 'The San Miguel') },
       ];
 
