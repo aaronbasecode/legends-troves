@@ -191,19 +191,19 @@ body {
   background-size: 100% 100%, 100% 100%, 240px 240px, 100% 100%, 100% 100%;
 }
 
-/* Fine, small non-uniform torn-paper bottom edge (full-width non-repeating SVG mask) */
+/* Detailed, non-uniform fibrous torn-paper bottom edge (SVG multi-octave displacement mask, <700B) */
 .ragged-bottom {
   -webkit-mask-image:
     linear-gradient(#000, #000),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 4' preserveAspectRatio='none'%3E%3Cpolygon fill='%23000' points='0,0 1440,0 1440,2.4 1432,1.8 1425,2.9 1413,2.1 1406,1.3 1397,2.6 1384,3.4 1378,1.9 1365,2.3 1359,0.9 1351,2.5 1338,3.1 1327,1.7 1316,2.4 1304,3.6 1296,2.0 1283,1.5 1274,2.8 1261,2.1 1249,3.3 1241,1.6 1228,2.2 1219,0.7 1212,2.4 1198,3.2 1186,1.9 1173,2.6 1162,1.4 1151,2.9 1139,3.5 1129,2.0 1115,1.6 1104,2.5 1091,3.1 1083,1.8 1069,2.4 1058,1.0 1050,2.6 1036,3.4 1024,2.1 1011,1.5 999,2.7 987,3.6 978,1.9 964,2.3 952,1.4 941,2.8 928,3.2 917,1.8 903,2.5 894,0.8 886,2.2 872,3.3 859,2.0 847,1.6 835,2.9 823,3.5 813,1.9 799,2.4 786,1.3 775,2.7 762,3.1 751,1.7 738,2.5 729,0.9 721,2.3 707,3.4 694,2.1 681,1.5 669,2.8 657,3.6 648,1.8 634,2.4 621,1.4 610,2.7 597,3.2 586,1.9 573,2.5 564,0.7 556,2.3 542,3.3 529,2.0 516,1.6 504,2.9 492,3.5 483,1.8 469,2.4 456,1.3 445,2.6 432,3.2 421,1.7 408,2.5 399,1.0 391,2.3 377,3.4 364,2.0 351,1.5 339,2.8 327,3.6 318,1.9 304,2.4 291,1.4 280,2.7 267,3.1 256,1.8 243,2.5 234,0.8 226,2.2 212,3.3 199,2.1 186,1.6 174,2.9 162,3.5 153,1.9 139,2.4 126,1.3 115,2.7 102,3.2 91,1.8 78,2.5 69,0.9 61,2.3 47,3.4 34,2.0 21,1.6 9,2.8 0,2.2'/%3E%3C/svg%3E");
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 18' preserveAspectRatio='none'%3E%3Cfilter id='t'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.014 0.05' numOctaves='3' seed='5' result='b'/%3E%3CfeDisplacementMap in='SourceGraphic' in2='b' scale='7' xChannelSelector='R' yChannelSelector='G' result='m'/%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.22 0.38' numOctaves='4' seed='13' result='f'/%3E%3CfeDisplacementMap in='m' in2='f' scale='4.5' xChannelSelector='R' yChannelSelector='G'/%3E%3C/filter%3E%3Cpath fill='%23000' filter='url(%23t)' d='M-10,-10 H1450 V10 Q1260,13 1080,8 T720,11 T360,7 T-10,11 Z'/%3E%3C/svg%3E");
   -webkit-mask-position: top left, bottom left;
-  -webkit-mask-size: 100% calc(100% - 3px), 100% 4px;
+  -webkit-mask-size: 100% calc(100% - 14px), 100% 18px;
   -webkit-mask-repeat: no-repeat, no-repeat;
   mask-image:
     linear-gradient(#000, #000),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 4' preserveAspectRatio='none'%3E%3Cpolygon fill='%23000' points='0,0 1440,0 1440,2.4 1432,1.8 1425,2.9 1413,2.1 1406,1.3 1397,2.6 1384,3.4 1378,1.9 1365,2.3 1359,0.9 1351,2.5 1338,3.1 1327,1.7 1316,2.4 1304,3.6 1296,2.0 1283,1.5 1274,2.8 1261,2.1 1249,3.3 1241,1.6 1228,2.2 1219,0.7 1212,2.4 1198,3.2 1186,1.9 1173,2.6 1162,1.4 1151,2.9 1139,3.5 1129,2.0 1115,1.6 1104,2.5 1091,3.1 1083,1.8 1069,2.4 1058,1.0 1050,2.6 1036,3.4 1024,2.1 1011,1.5 999,2.7 987,3.6 978,1.9 964,2.3 952,1.4 941,2.8 928,3.2 917,1.8 903,2.5 894,0.8 886,2.2 872,3.3 859,2.0 847,1.6 835,2.9 823,3.5 813,1.9 799,2.4 786,1.3 775,2.7 762,3.1 751,1.7 738,2.5 729,0.9 721,2.3 707,3.4 694,2.1 681,1.5 669,2.8 657,3.6 648,1.8 634,2.4 621,1.4 610,2.7 597,3.2 586,1.9 573,2.5 564,0.7 556,2.3 542,3.3 529,2.0 516,1.6 504,2.9 492,3.5 483,1.8 469,2.4 456,1.3 445,2.6 432,3.2 421,1.7 408,2.5 399,1.0 391,2.3 377,3.4 364,2.0 351,1.5 339,2.8 327,3.6 318,1.9 304,2.4 291,1.4 280,2.7 267,3.1 256,1.8 243,2.5 234,0.8 226,2.2 212,3.3 199,2.1 186,1.6 174,2.9 162,3.5 153,1.9 139,2.4 126,1.3 115,2.7 102,3.2 91,1.8 78,2.5 69,0.9 61,2.3 47,3.4 34,2.0 21,1.6 9,2.8 0,2.2'/%3E%3C/svg%3E");
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 18' preserveAspectRatio='none'%3E%3Cfilter id='t'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.014 0.05' numOctaves='3' seed='5' result='b'/%3E%3CfeDisplacementMap in='SourceGraphic' in2='b' scale='7' xChannelSelector='R' yChannelSelector='G' result='m'/%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.22 0.38' numOctaves='4' seed='13' result='f'/%3E%3CfeDisplacementMap in='m' in2='f' scale='4.5' xChannelSelector='R' yChannelSelector='G'/%3E%3C/filter%3E%3Cpath fill='%23000' filter='url(%23t)' d='M-10,-10 H1450 V10 Q1260,13 1080,8 T720,11 T360,7 T-10,11 Z'/%3E%3C/svg%3E");
   mask-position: top left, bottom left;
-  mask-size: 100% calc(100% - 3px), 100% 4px;
+  mask-size: 100% calc(100% - 14px), 100% 18px;
   mask-repeat: no-repeat, no-repeat;
 }
 
