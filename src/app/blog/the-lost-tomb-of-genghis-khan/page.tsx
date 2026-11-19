@@ -68,12 +68,14 @@ export default function TheLostTombOfGenghisKhanPage() {
         <p className="text-sm sm:text-base leading-relaxed text-[#2C2504]/90 mb-4 font-normal">
           In his youth, Temüjin had fled from Merkit raiders onto the forested slopes of Burkhan Khaldun, praying to the mountain for his life and declaring:
         </p>
-        <blockquote className="my-4 pl-4 border-l-4 border-[#D4AF37] italic text-sm sm:text-base text-[#2C2504]/95 bg-[#D8D1B6]/30 py-3 rounded-r-lg">
+        <div className="my-4 drop-shadow-[0_1px_2px_rgba(44,37,4,0.14)]">
+          <blockquote className="pl-4 border-l-4 border-[#D4AF37] italic text-sm sm:text-base text-[#2C2504]/95 bg-parchment parchment-card-sm py-3 rounded-none pr-4">
           &quot;Mount Burkhan Khaldun has saved my life, a life worth no more than a louse... Every morning I will sacrifice to Burkhan Khaldun; every day I will pray to it. My sons and the sons of my sons shall hold it in their remembrance.&quot;
           <span className="block mt-1 font-semibold not-italic text-xs text-[#2C2504]/75">
             — The Secret History of the Mongols (c. 1240 AD)
           </span>
         </blockquote>
+        </div>
         <p className="text-sm sm:text-base leading-relaxed text-[#2C2504]/90 font-normal">
           Following his burial, the Khan&apos;s successors declared an area of roughly 240 square kilometers around Burkhan Khaldun as the <strong>Ikh Khorig</strong>—the <em>&quot;Great Taboo.&quot;</em> For nearly eight centuries, this territory was quarantined under pain of immediate death. Only members of the royal <em>Golden Family</em> and an elite hereditary clan of Uriankhai warrior guards were permitted to set foot in the sanctuary. Even during the 20th-century Soviet era, the wilderness remained strictly militarized and off-limits to foreign archaeological exploration.
         </p>
@@ -86,7 +88,8 @@ export default function TheLostTombOfGenghisKhanPage() {
         </p>
 
         {/* Responsive comparison table container */}
-        <div className="my-4 rounded-xl bg-[#D8D1B6]/50 overflow-hidden shadow-sm">
+        <div className="my-4 drop-shadow-[0_1px_2px_rgba(44,37,4,0.14)]">
+          <div className="bg-parchment parchment-card-sm rounded-none overflow-hidden">
           <div className="overflow-x-auto p-3 sm:p-4">
             <table className="w-full text-left text-xs sm:text-sm text-[#2C2504] min-w-[540px]">
               <thead>
@@ -128,6 +131,7 @@ export default function TheLostTombOfGenghisKhanPage() {
           <div className="sm:hidden px-3 py-1.5 bg-[#C6BF9E]/40 text-[11px] text-[#2C2504]/70 text-center italic">
             Scroll horizontally to view full table
           </div>
+        </div>
         </div>
       </BlogSection>
 

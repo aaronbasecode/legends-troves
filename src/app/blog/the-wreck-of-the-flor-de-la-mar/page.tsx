@@ -64,7 +64,8 @@ export default function TheWreckOfTheFlorDeLaMarPage() {
         </p>
 
         {/* Responsive comparison table container */}
-        <div className="my-4 rounded-xl bg-[#D8D1B6]/50 overflow-hidden shadow-sm">
+        <div className="my-4 drop-shadow-[0_1px_2px_rgba(44,37,4,0.14)]">
+          <div className="bg-parchment parchment-card-sm rounded-none overflow-hidden">
           <div className="overflow-x-auto p-3 sm:p-4">
             <table className="w-full text-left text-xs sm:text-sm text-[#2C2504] min-w-[540px]">
               <thead>
@@ -113,6 +114,7 @@ export default function TheWreckOfTheFlorDeLaMarPage() {
             Scroll horizontally to view full table
           </div>
         </div>
+        </div>
       </BlogSection>
 
       {/* Section 4: The Midnight Tempest off Sumatra */}
@@ -123,12 +125,14 @@ export default function TheWreckOfTheFlorDeLaMarPage() {
         <p className="text-sm sm:text-base leading-relaxed text-[#2C2504]/90 mb-4 font-normal">
           Blinded by torrential rain and driven by furious breakers toward the uncharted coastal reefs, the ship struck a jagged coral bank near <strong>Timia Point</strong> (believed to be near Cape Diamond or Tanjung Jambuair). The impact shattered the rotting hull. Under the repeated sledgehammer blows of twenty-foot breakers, the massive vessel broke cleanly in two.
         </p>
-        <blockquote className="my-4 pl-4 border-l-4 border-[#D4AF37] italic text-sm sm:text-base text-[#2C2504]/95 bg-[#D8D1B6]/30 py-3 rounded-r-lg">
+        <div className="my-4 drop-shadow-[0_1px_2px_rgba(44,37,4,0.14)]">
+          <blockquote className="pl-4 border-l-4 border-[#D4AF37] italic text-sm sm:text-base text-[#2C2504]/95 bg-parchment parchment-card-sm py-3 rounded-none pr-4">
           &quot;The sea was so terrible that no man could stand upon the deck... The ship broke in halves, and all that immense treasure of Malacca—the gold, the jewels, the lions, and the tribute of kings—went down into the sand and the foam. More than four hundred souls perished before morning broke.&quot;
           <span className="block mt-1 font-semibold not-italic text-xs sm:text-sm text-[#2C2504]/80">
             — Fernão Lopes de Castanheda, History of the Discovery and Conquest of India (1551)
           </span>
         </blockquote>
+        </div>
         <p className="text-sm sm:text-base leading-relaxed text-[#2C2504]/90 font-normal">
           Afonso de Albuquerque survived by a sheer miracle. Clinging to a makeshift timber raft with an orphaned slave girl in his arms and a handful of senior captains, he drifted helplessly away into the darkness, watching his beloved flagship slip beneath the foaming coral surf with over 400 soldiers, sailors, and captives.
         </p>

@@ -94,7 +94,8 @@ export default function TheNuestraSenoraDeLaConcepcionPage() {
         </p>
 
         {/* Responsive comparison table container */}
-        <div className="my-4 rounded-xl bg-[#D8D1B6]/50 overflow-hidden shadow-sm">
+        <div className="my-4 drop-shadow-[0_1px_2px_rgba(44,37,4,0.14)]">
+          <div className="bg-parchment parchment-card-sm rounded-none overflow-hidden">
           <div className="overflow-x-auto p-3 sm:p-4">
             <table className="w-full text-left text-xs sm:text-sm text-[#2C2504] min-w-[540px]">
               <thead>
@@ -143,6 +144,7 @@ export default function TheNuestraSenoraDeLaConcepcionPage() {
             Scroll horizontally to view full table
           </div>
         </div>
+        </div>
       </BlogSection>
 
       {/* Section 5: Chamorro Salvage and Colonial Legend */}
@@ -153,12 +155,14 @@ export default function TheNuestraSenoraDeLaConcepcionPage() {
         <p className="text-sm sm:text-base leading-relaxed text-[#2C2504]/90 mb-4 font-normal">
           To the islanders, the most coveted treasures were not gold coins, but iron fasteners, bronze cannons, and ship spikes, which were expertly reforged into adzes, spears, and fishing hooks. However, the glittering gold jewelry quickly entered the local prestige economy:
         </p>
-        <blockquote className="my-4 pl-4 border-l-4 border-[#D4AF37] italic text-sm sm:text-base text-[#2C2504]/95 bg-[#D8D1B6]/30 py-3 rounded-r-lg">
+        <div className="my-4 drop-shadow-[0_1px_2px_rgba(44,37,4,0.14)]">
+          <blockquote className="pl-4 border-l-4 border-[#D4AF37] italic text-sm sm:text-base text-[#2C2504]/95 bg-parchment parchment-card-sm py-3 rounded-none pr-4">
           &quot;When the first Jesuit fathers landed on Saipan three decades later, they found Chamorro chieftains wearing magnificent Spanish gold filigree chains wound multiple times around their waists, and golden reliquary pendants worn as tribal adornments.&quot;
           <span className="block mt-1 font-semibold not-italic text-xs sm:text-sm text-[#2C2504]/80">
             — Father Diego Luis de San Vitores, Apostolic Mission Chronicles (c. 1668)
           </span>
         </blockquote>
+        </div>
       </BlogSection>
 
       {/* Section 6: The 1987 Archaeological Rediscovery */}

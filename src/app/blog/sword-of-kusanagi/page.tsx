@@ -40,12 +40,14 @@ export default function SwordOfKusanagiPage() {
         <p className="text-sm sm:text-base leading-relaxed text-[#2C2504]/90 font-normal">
           Susanoo drew his ten-span sword, the <em>Totsuka-no-Tsurugi</em>, and hacked the dragon into pieces, turning the Hi River crimson with blood. But as he sliced into the fourth tail of the slain monstrosity, his blade struck an unyielding, diamond-hard obstruction that notched the iron edge of his sword. Splitting the serpent&apos;s tail open, Susanoo unearthed a wondrous, pristine double-edged blade gleaming with celestial brilliance. Because thick clouds and torrential vapors had perpetually hovered over the serpent&apos;s lair, he christened the holy weapon <strong>Ame-no-Murakumo-no-Tsurugi</strong> (天叢雲剣, &quot;Heavenly Sword of Gathering Clouds&quot;).
         </p>
-        <blockquote className="my-4 pl-4 border-l-4 border-[#D4AF37] italic text-sm sm:text-base text-[#2C2504]/95 bg-[#D8D1B6]/30 py-3 rounded-r-lg">
+        <div className="my-4 drop-shadow-[0_1px_2px_rgba(44,37,4,0.14)]">
+          <blockquote className="pl-4 border-l-4 border-[#D4AF37] italic text-sm sm:text-base text-[#2C2504]/95 bg-parchment parchment-card-sm py-3 rounded-none pr-4">
           &quot;When Susanoo sliced open the tail of the great serpent, his blade was nicked. Puzzled, he thrust in the point of his sword and split the flesh, discovering inside an extraordinary sword. Considering it a divine treasure, he presented it to the Sun Goddess in heaven.&quot;
           <span className="block mt-1 font-semibold not-italic text-xs sm:text-sm text-[#2C2504]/80">
             — Nihon Shoki (Chronicles of Japan, c. 720 AD)
           </span>
         </blockquote>
+        </div>
       </BlogSection>
 
       {/* Section 2: The Grass-Cutter & Prince Yamato Takeru */}
@@ -82,7 +84,8 @@ export default function SwordOfKusanagiPage() {
         </p>
 
         {/* Responsive comparison table container */}
-        <div className="my-4 rounded-xl bg-[#D8D1B6]/50 overflow-hidden shadow-sm">
+        <div className="my-4 drop-shadow-[0_1px_2px_rgba(44,37,4,0.14)]">
+          <div className="bg-parchment parchment-card-sm rounded-none overflow-hidden">
           <div className="overflow-x-auto p-3 sm:p-4">
             <table className="w-full text-left text-xs sm:text-sm text-[#2C2504] min-w-[540px]">
               <thead>
@@ -118,6 +121,7 @@ export default function SwordOfKusanagiPage() {
           <div className="sm:hidden px-3 py-1.5 bg-[#C6BF9E]/40 text-[11px] text-[#2C2504]/70 text-center italic">
             Scroll horizontally to view full table
           </div>
+        </div>
         </div>
       </BlogSection>
 

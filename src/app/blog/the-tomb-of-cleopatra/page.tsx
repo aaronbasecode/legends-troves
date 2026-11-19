@@ -41,10 +41,12 @@ export default function TheTombOfCleopatraPage() {
         <p className="text-sm sm:text-base leading-relaxed text-[#2C2504]/90 mb-4 font-normal">
           Ancient Roman biographer Plutarch, writing with access to the firsthand memoirs of Cleopatra&apos;s personal physician Olympus, records that Octavian was moved by the tragic grandeur of their demise. He granted the queen&apos;s dying petition to be embalmed and entombed side-by-side with Mark Antony with the highest sovereign honors:
         </p>
-        <blockquote className="my-4 border-l-4 border-[#2C2504]/40 pl-4 py-1 italic text-xs sm:text-sm text-[#2C2504]/85 bg-[#D8D1B6]/30 rounded-r-lg">
+        <div className="my-4 drop-shadow-[0_1px_2px_rgba(44,37,4,0.14)]">
+          <blockquote className="border-l-4 border-[#2C2504]/40 pl-4 py-1 italic text-xs sm:text-sm text-[#2C2504]/85 bg-parchment parchment-card-sm rounded-none pr-4">
           &quot;Her body was given to Antony for burial in splendid and royal fashion, and Octavian gave orders that both should be laid to rest in one and the same tomb.&quot;
           <span className="block mt-1 font-semibold not-italic text-[11px] sm:text-xs text-[#2C2504]/70">— Plutarch, Life of Antony</span>
         </blockquote>
+        </div>
         <p className="text-sm sm:text-base leading-relaxed text-[#2C2504]/90 mb-3 font-normal">
           According to classical chronicles by Cassius Dio and Suetonius, Cleopatra had spent years constructing a monumental tomb adjoining the sacred temple of Isis:
         </p>
@@ -81,7 +83,8 @@ export default function TheTombOfCleopatraPage() {
         </p>
 
         {/* Responsive comparison table container */}
-        <div className="my-4 rounded-xl bg-[#D8D1B6]/50 overflow-hidden shadow-sm">
+        <div className="my-4 drop-shadow-[0_1px_2px_rgba(44,37,4,0.14)]">
+          <div className="bg-parchment parchment-card-sm rounded-none overflow-hidden">
           <div className="overflow-x-auto p-3 sm:p-4">
             <table className="w-full text-left text-xs sm:text-sm text-[#2C2504] min-w-[540px]">
               <thead>
@@ -129,6 +132,7 @@ export default function TheTombOfCleopatraPage() {
           <div className="sm:hidden px-3 py-1.5 bg-[#C6BF9E]/40 text-[11px] text-[#2C2504]/70 text-center italic">
             Scroll horizontally to view full table
           </div>
+        </div>
         </div>
       </BlogSection>
 

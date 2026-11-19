@@ -44,12 +44,14 @@ export default function TheSunkenTreasureOfIssykKulPage() {
         <p className="text-sm sm:text-base leading-relaxed text-[#2C2504]/90 mb-4 font-normal">
           Beside the illustration, an archaic Catalan inscription reads:
         </p>
-        <blockquote className="my-4 pl-4 border-l-4 border-[#D4AF37] italic text-sm sm:text-base text-[#2C2504]/95 bg-[#D8D1B6]/30 py-3 rounded-r-lg">
+        <div className="my-4 drop-shadow-[0_1px_2px_rgba(44,37,4,0.14)]">
+          <blockquote className="pl-4 border-l-4 border-[#D4AF37] italic text-sm sm:text-base text-[#2C2504]/95 bg-parchment parchment-card-sm py-3 rounded-none pr-4">
           &quot;Lo lloch qui es apelat Yssikol. En aquest lloch es lo monestir dels frares d&apos;Armènia, en lo qual hom diu que és lo cors de sent Matheu, apòstol e evangelista.&quot;
           <span className="block mt-1 font-semibold not-italic text-xs text-[#2C2504]/75">
             — (&quot;The place called Issyk-Kul. In this place stands the monastery of the Armenian friars, in which it is said rests the body of Saint Matthew, apostle and evangelist.&quot;)
           </span>
         </blockquote>
+        </div>
         <p className="text-sm sm:text-base leading-relaxed text-[#2C2504]/90 font-normal">
           Medieval Nestorian, Armenian, and Syrian Christian communities flourished along this branch of the Silk Road during the Pax Mongolica. Chroniclers recorded that the sanctuary safeguarded immense ecclesiastic treasures: golden liturgical chalices, gemstone-studded silver reliquaries containing the holy apostolic relics, Byzantine cloisonné enamels, and illuminated manuscripts inscribed on vellum. However, catastrophic tectonic earthquakes—frequent in the active Tian Shan fault system—triggered massive ground subsidence. Sometime in the late 14th or early 15th century, the shoreline collapsed, and the rising mountain waters swallowed the stone monastery and its sacred vaults whole.
         </p>
@@ -86,7 +88,8 @@ export default function TheSunkenTreasureOfIssykKulPage() {
         </p>
 
         {/* Responsive comparison table container */}
-        <div className="my-4 rounded-xl bg-[#D8D1B6]/50 overflow-hidden shadow-sm">
+        <div className="my-4 drop-shadow-[0_1px_2px_rgba(44,37,4,0.14)]">
+          <div className="bg-parchment parchment-card-sm rounded-none overflow-hidden">
           <div className="overflow-x-auto p-3 sm:p-4">
             <table className="w-full text-left text-xs sm:text-sm text-[#2C2504] min-w-[540px]">
               <thead>
@@ -134,6 +137,7 @@ export default function TheSunkenTreasureOfIssykKulPage() {
           <div className="sm:hidden px-3 py-1.5 bg-[#C6BF9E]/40 text-[11px] text-[#2C2504]/70 text-center italic">
             Scroll horizontally to view full table
           </div>
+        </div>
         </div>
       </BlogSection>
 

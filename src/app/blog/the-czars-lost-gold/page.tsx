@@ -65,12 +65,14 @@ export default function TheCzarsLostGoldPage() {
         <p className="text-sm sm:text-base leading-relaxed text-[#2C2504]/90 mb-4 font-normal">
           Blocking their eastward flight stood <strong>Lake Baikal</strong>—the oldest, deepest, and most voluminous freshwater lake on Earth, plunging to an unfathomable depth of 1,642 meters (5,387 feet). While the Circum-Baikal Railway hugged the sheer granite cliffs along the lake&apos;s southern littoral through 39 blast-hewn tunnels, parts of the track were blocked by derailed carriages and guerrilla barricades.
         </p>
-        <blockquote className="my-4 pl-4 border-l-4 border-[#D4AF37] italic text-sm sm:text-base text-[#2C2504]/95 bg-[#D8D1B6]/30 py-3 rounded-r-lg">
+        <div className="my-4 drop-shadow-[0_1px_2px_rgba(44,37,4,0.14)]">
+          <blockquote className="pl-4 border-l-4 border-[#D4AF37] italic text-sm sm:text-base text-[#2C2504]/95 bg-parchment parchment-card-sm py-3 rounded-none pr-4">
           &quot;Horse-drawn sledges loaded with iron chests of state bullion ventured out onto the wind-swept, groaning ice. Ferocious arctic gales screamed across the chasm, opening massive black fissures (*stanovye shcheli*) in the meter-thick ice. Heavily burdened wagons and freezing pack horses slipped into the abyssal depths, swallowed forever in water colder than death.&quot;
           <span className="block mt-1 font-semibold not-italic text-xs text-[#2C2504]/75">
             — Eyewitness memoirs of White Guard Cossack survivors, Harbin, 1928
           </span>
         </blockquote>
+        </div>
         <p className="text-sm sm:text-base leading-relaxed text-[#2C2504]/90 font-normal">
           Simultaneously, persistent regional accounts describe a train accident near <strong>Cape Polovinny</strong>, where an armored wagon carrying imperial bullion careened off a precarious cliffside embankment into the lake, its heavy iron freight plunging straight down the near-vertical underwater precipice.
         </p>
@@ -83,7 +85,8 @@ export default function TheCzarsLostGoldPage() {
         </p>
 
         {/* Responsive comparison table container */}
-        <div className="my-4 rounded-xl bg-[#D8D1B6]/50 overflow-hidden shadow-sm">
+        <div className="my-4 drop-shadow-[0_1px_2px_rgba(44,37,4,0.14)]">
+          <div className="bg-parchment parchment-card-sm rounded-none overflow-hidden">
           <div className="overflow-x-auto p-3 sm:p-4">
             <table className="w-full text-left text-xs sm:text-sm text-[#2C2504] min-w-[540px]">
               <thead>
@@ -125,6 +128,7 @@ export default function TheCzarsLostGoldPage() {
           <div className="sm:hidden px-3 py-1.5 bg-[#C6BF9E]/40 text-[11px] text-[#2C2504]/70 text-center italic">
             Scroll horizontally to view full table
           </div>
+        </div>
         </div>
       </BlogSection>
 

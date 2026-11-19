@@ -95,12 +95,14 @@ export default function PadmanabhaswamyTempleVaultBPage() {
         <p className="text-sm sm:text-base leading-relaxed text-[#2C2504]/90 mb-4 font-normal">
           According to regional esoteric lore preserved in Kerala&apos;s sacred *Tantra Shastra* traditions, Vault B was sealed centuries ago by revered <em>Siddhars</em> and high spiritual masters using an ancient occult lock known as the <strong>Naga Bandham</strong> (or <em>Naga Paasam</em>—the serpent noose).
         </p>
-        <blockquote className="my-4 pl-4 border-l-4 border-[#D4AF37] italic text-sm sm:text-base text-[#2C2504]/95 bg-[#D8D1B6]/30 py-3 rounded-r-lg">
+        <div className="my-4 drop-shadow-[0_1px_2px_rgba(44,37,4,0.14)]">
+          <blockquote className="pl-4 border-l-4 border-[#D4AF37] italic text-sm sm:text-base text-[#2C2504]/95 bg-parchment parchment-card-sm py-3 rounded-none pr-4">
           &quot;This chamber was locked not by human keys of metal, but by sound frequencies and tantric incantations tuned to the cosmic serpent deity. It can only be unlocked by a sage possessing pure spiritual intent who correctly chants the sacred Garuda Mantra with precise Sanskrit intonation.&quot;
           <span className="block mt-1 font-semibold not-italic text-xs text-[#2C2504]/75">
             — Oral tradition preserved by the Travancore Royal Council of Priests
           </span>
         </blockquote>
+        </div>
         <p className="text-sm sm:text-base leading-relaxed text-[#2C2504]/90 font-normal">
           Temple scholars insist that any attempt to breach the door using modern engineering tools, diamond drills, or explosives will destabilize the foundational granite aquifers beneath the temple, causing water from the Arabian Sea to surge through underground conduits and inundate the entire sanctuary. Moreover, local superstition warns that anyone who forcibly disrupts the guardian serpents will succumb to an immediate, untimely death.
         </p>
@@ -113,7 +115,8 @@ export default function PadmanabhaswamyTempleVaultBPage() {
         </p>
 
         {/* Responsive comparison table container */}
-        <div className="my-4 rounded-xl bg-[#D8D1B6]/50 overflow-hidden shadow-sm">
+        <div className="my-4 drop-shadow-[0_1px_2px_rgba(44,37,4,0.14)]">
+          <div className="bg-parchment parchment-card-sm rounded-none overflow-hidden">
           <div className="overflow-x-auto p-3 sm:p-4">
             <table className="w-full text-left text-xs sm:text-sm text-[#2C2504] min-w-[540px]">
               <thead>
@@ -155,6 +158,7 @@ export default function PadmanabhaswamyTempleVaultBPage() {
           <div className="sm:hidden px-3 py-1.5 bg-[#C6BF9E]/40 text-[11px] text-[#2C2504]/70 text-center italic">
             Scroll horizontally to view full table
           </div>
+        </div>
         </div>
       </BlogSection>
 

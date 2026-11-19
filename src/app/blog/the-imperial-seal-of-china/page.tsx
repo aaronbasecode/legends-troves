@@ -37,7 +37,8 @@ export default function TheImperialSealOfChinaPage() {
         <p className="text-sm sm:text-base leading-relaxed text-[#2C2504]/90 font-normal">
           Imperial craftsman Sun Shou was commissioned to sculpt the block into a square measuring four Chinese inches on each side. The top was carved into a handle depicting <strong>five intertwining coiling dragons</strong>, symbolizing dominion over the five cardinal elements and directions. Upon the base, Prime Minister <strong>Li Si</strong> personally drafted eight characters in Small Seal Script (<em>Qin Zhuan</em>), carved with exquisite calligraphic precision:
         </p>
-        <blockquote className="my-4 pl-4 border-l-4 border-[#D4AF37] italic text-sm sm:text-base text-[#2C2504]/95 bg-[#D8D1B6]/30 py-3 rounded-r-lg">
+        <div className="my-4 drop-shadow-[0_1px_2px_rgba(44,37,4,0.14)]">
+          <blockquote className="pl-4 border-l-4 border-[#D4AF37] italic text-sm sm:text-base text-[#2C2504]/95 bg-parchment parchment-card-sm py-3 rounded-none pr-4">
           &quot;受命於天，既壽永昌&quot;
           <span className="block mt-1 font-semibold not-italic text-xs sm:text-sm text-[#2C2504]/80">
             &quot;Having received the Mandate from Heaven, may the Emperor lead a long and prosperous life.&quot;
@@ -46,6 +47,7 @@ export default function TheImperialSealOfChinaPage() {
             — Li Si, Prime Minister of the Qin Dynasty (221 BC)
           </span>
         </blockquote>
+        </div>
       </BlogSection>
 
       {/* Section 2: The Golden Corner of Empress Dowager Wang */}
@@ -103,7 +105,8 @@ export default function TheImperialSealOfChinaPage() {
         </p>
 
         {/* Responsive comparison table container */}
-        <div className="my-4 rounded-xl bg-[#D8D1B6]/50 overflow-hidden shadow-sm">
+        <div className="my-4 drop-shadow-[0_1px_2px_rgba(44,37,4,0.14)]">
+          <div className="bg-parchment parchment-card-sm rounded-none overflow-hidden">
           <div className="overflow-x-auto p-3 sm:p-4">
             <table className="w-full text-left text-xs sm:text-sm text-[#2C2504] min-w-[540px]">
               <thead>
@@ -158,6 +161,7 @@ export default function TheImperialSealOfChinaPage() {
             Scroll horizontally to view full table
           </div>
         </div>
+        </div>
       </BlogSection>
 
       {/* Section 5: The Infernal Pyre of Xuanwu Tower */}
@@ -171,12 +175,14 @@ export default function TheImperialSealOfChinaPage() {
         <p className="text-sm sm:text-base leading-relaxed text-[#2C2504]/90 mb-4 font-normal">
           Li Congke assembled his empress, the imperial family, loyal court eunuchs, and the accumulated treasures of the Tang Dynasty inside the towering wooden <strong>Xuanwu Tower</strong> (Tower of Mysterious Prowess). Barricading the heavy cedar doors from within, the emperor tossed burning torches onto stockpiles of silk, oil, and resin:
         </p>
-        <blockquote className="my-4 pl-4 border-l-4 border-[#2C2504]/40 py-2 italic text-xs sm:text-sm text-[#2C2504]/85 bg-[#D8D1B6]/30 rounded-r-lg">
+        <div className="my-4 drop-shadow-[0_1px_2px_rgba(44,37,4,0.14)]">
+          <blockquote className="pl-4 border-l-4 border-[#2C2504]/40 py-2 italic text-xs sm:text-sm text-[#2C2504]/85 bg-parchment parchment-card-sm rounded-none pr-4">
           &quot;On the day of Xin-Chou, as the Khitan cavalry encircled the walls, Emperor Li Congke took the Heirloom Seal, climbed the Xuanwu Tower with his family, and perished in a roaring sea of flame. When the ashes grew cold, neither the emperor&apos;s remains nor the jade of heaven could be found.&quot;
           <span className="block mt-1 font-semibold not-italic text-[11px] sm:text-xs text-[#2C2504]/70">
             — Ouyang Xiu, Historical Records of the Five Dynasties (Xin Wudaishi)
           </span>
         </blockquote>
+        </div>
         <p className="text-sm sm:text-base leading-relaxed text-[#2C2504]/90 font-normal">
           When Shi Jingtang and his Khitan allies sifted through the smoldering ash, the Heirloom Seal of the Realm had vanished. It had endured for 1,157 years—and in a single night of fire and grief, the physical link to Qin Shi Huang was severed.
         </p>

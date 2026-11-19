@@ -62,12 +62,14 @@ export default function YamashitaGoldPage() {
         <p className="text-sm sm:text-base leading-relaxed text-[#2C2504]/90 mb-4 font-normal">
           The engineering required to construct these subterranean vaults was monumental. Thousands of Allied prisoners of war, conscripted Filipino laborers, and Javanese civilian workers were forced into round-the-clock manual excavation through dense granite and volcanic shale. Heavy timber beams reinforced the narrow galleries, while steel rails carried wooden munitions crates packed with solid gold bars deep into mountain bowels.
         </p>
-        <blockquote className="my-4 pl-4 border-l-4 border-[#D4AF37] italic text-sm sm:text-base text-[#2C2504]/95 bg-[#D8D1B6]/30 py-3 rounded-r-lg">
+        <div className="my-4 drop-shadow-[0_1px_2px_rgba(44,37,4,0.14)]">
+          <blockquote className="pl-4 border-l-4 border-[#D4AF37] italic text-sm sm:text-base text-[#2C2504]/95 bg-parchment parchment-card-sm py-3 rounded-none pr-4">
           &quot;When the final gold crates were stacked and the inventory seals stamped, the commanding officers toasted the Emperor inside the main chamber. At midnight, as the laborers slept, Japanese engineers ignited hundreds of pounds of picric acid explosives and 500-pound aerial bombs at the tunnel mouths. The blast collapsed thousands of tons of mountain rock, entombing the workers and junior officers forever within the vault.&quot;
           <span className="block mt-1 font-semibold not-italic text-xs sm:text-sm text-[#2C2504]/80">
             — Declassified intelligence debriefing of Filipino guerrilla scouts, Northern Luzon, 1946
           </span>
         </blockquote>
+        </div>
         <p className="text-sm sm:text-base leading-relaxed text-[#2C2504]/90 mb-4 font-normal">
           To ensure that salvage by invading forces was impossible, Japanese military engineers armed the approaches with diabolical countermeasures:
         </p>
@@ -91,7 +93,8 @@ export default function YamashitaGoldPage() {
         </p>
 
         {/* Responsive comparison table container */}
-        <div className="my-4 rounded-xl bg-[#D8D1B6]/50 overflow-hidden shadow-sm">
+        <div className="my-4 drop-shadow-[0_1px_2px_rgba(44,37,4,0.14)]">
+          <div className="bg-parchment parchment-card-sm rounded-none overflow-hidden">
           <div className="overflow-x-auto p-3 sm:p-4">
             <table className="w-full text-left text-xs sm:text-sm text-[#2C2504] min-w-[540px]">
               <thead>
@@ -133,6 +136,7 @@ export default function YamashitaGoldPage() {
           <div className="sm:hidden px-3 py-1.5 bg-[#C6BF9E]/40 text-[11px] text-[#2C2504]/70 text-center italic">
             Scroll horizontally to view full table
           </div>
+        </div>
         </div>
       </BlogSection>
 

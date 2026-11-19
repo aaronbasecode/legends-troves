@@ -91,7 +91,8 @@ export default function LassetersReefPage() {
         </p>
 
         {/* Responsive comparison table container */}
-        <div className="my-4 rounded-xl bg-[#D8D1B6]/50 overflow-hidden shadow-sm">
+        <div className="my-4 drop-shadow-[0_1px_2px_rgba(44,37,4,0.14)]">
+          <div className="bg-parchment parchment-card-sm rounded-none overflow-hidden">
           <div className="overflow-x-auto p-3 sm:p-4">
             <table className="w-full text-left text-xs sm:text-sm text-[#2C2504] min-w-[540px]">
               <thead>
@@ -140,6 +141,7 @@ export default function LassetersReefPage() {
             Scroll horizontally to view full table
           </div>
         </div>
+        </div>
       </BlogSection>
 
       {/* Section 5: Lasseter's Cave & The Bitter End */}
@@ -183,12 +185,14 @@ export default function LassetersReefPage() {
         <p className="text-sm sm:text-base leading-relaxed text-[#2C2504]/90 mb-3 font-normal">
           To his very last breath, Lasseter adamantly insisted that the fabulous reef was real:
         </p>
-        <blockquote className="my-4 pl-4 border-l-4 border-[#D4AF37] italic text-sm sm:text-base text-[#2C2504]/95 bg-[#D8D1B6]/30 py-3 rounded-r-lg">
+        <div className="my-4 drop-shadow-[0_1px_2px_rgba(44,37,4,0.14)]">
+          <blockquote className="pl-4 border-l-4 border-[#D4AF37] italic text-sm sm:text-base text-[#2C2504]/95 bg-parchment parchment-card-sm py-3 rounded-none pr-4">
           &quot;I have found the reef... What good is a reef worth millions when you are dying of thirst and starvation? My bones will lie in the desert, but the gold remains... May someone find the pegs I have driven.&quot;
           <span className="block mt-1 font-semibold not-italic text-xs sm:text-sm text-[#2C2504]/80">
             — Harold Bell Lasseter, Final Diary Entry (January 1931)
           </span>
         </blockquote>
+        </div>
       </BlogSection>
 
       {/* Section 7: Geological Reality vs. Legend */}
