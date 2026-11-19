@@ -9,9 +9,9 @@ export const metadata: Metadata = {
 
 export default function YamashitaTreasurePage() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-parchment">
       {/* Top Section: Dark Brown with Yamashita's Treasure & Contact */}
-      <section className="relative bg-[#302503] text-[#D8AE31] flex-1 flex flex-col justify-between pt-24 sm:pt-28 pb-14 sm:pb-20 px-4 sm:px-6">
+      <section className="relative bg-dark-parchment ragged-bottom text-[#D8AE31] flex-1 flex flex-col justify-between pt-24 sm:pt-28 pb-16 sm:pb-24 px-4 sm:px-6">
         <Header />
 
         <div className="w-full max-w-[800px] mx-auto my-auto flex flex-col items-center text-center">

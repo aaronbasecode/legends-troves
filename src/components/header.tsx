@@ -121,7 +121,7 @@ export function Header({ navLinks = defaultNavLinks, actionButton }: HeaderProps
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="absolute top-0 left-0 right-0 z-[1000] px-4 sm:px-6 py-2 flex justify-between items-center bg-header text-header-foreground border-b border-primary/10">
+    <header className="absolute top-0 left-0 right-0 z-[1000] px-4 sm:px-6 pt-2 pb-3 flex justify-between items-center bg-dark-parchment ragged-bottom text-header-foreground">
       <Link href="/" className="flex items-center hover:opacity-90 transition-opacity">
         <Logo />
       </Link>
