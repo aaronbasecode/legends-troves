@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { BlogLayout, BlogSection, BlogList, BlogListItem } from '@/components/blog-layout';
 
 export const metadata: Metadata = {
@@ -10,6 +11,17 @@ export default function TheMerchantRoyalPage() {
   return (
     <BlogLayout
       category="water"
+      topIcon={
+        <Image
+          src="/images/merchant-royal-icon.webp"
+          alt="The Merchant Royal Coin"
+          width={80}
+          height={80}
+          unoptimized
+          className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+          priority
+        />
+      }
       title="The Merchant Royal"
       imageSrc="/images/the-merchant-royal.jpg"
       imageAlt="The Merchant Royal navigating rough seas off the coast of Land's End, Cornwall"

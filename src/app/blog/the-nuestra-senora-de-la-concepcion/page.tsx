@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { BlogLayout, BlogSection, BlogList, BlogListItem } from '@/components/blog-layout';
 
 export const metadata: Metadata = {
@@ -10,6 +11,17 @@ export default function TheNuestraSenoraDeLaConcepcionPage() {
   return (
     <BlogLayout
       category="water"
+      topIcon={
+        <Image
+          src="/images/concepcion-icon.webp"
+          alt="The Nuestra Señora de la Concepción Coin"
+          width={80}
+          height={80}
+          unoptimized
+          className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+          priority
+        />
+      }
       title="The Nuestra Señora de la Concepción"
       imageSrc="/images/the-nuestra-senora-de-la-concepcion.jpg"
       imageAlt="A magnificent 17th-century Spanish Manila galleon, the Nuestra Señora de la Concepción, sailing across tropical Pacific waters near coral reefs"

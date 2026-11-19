@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { BlogLayout, BlogSection, BlogList, BlogListItem } from '@/components/blog-layout';
 
 export const metadata: Metadata = {
@@ -10,6 +11,17 @@ export default function TheAwaMaruPage() {
   return (
     <BlogLayout
       category="water"
+      topIcon={
+        <Image
+          src="/images/awa-maru-icon.webp"
+          alt="The Awa Maru Coin"
+          width={80}
+          height={80}
+          unoptimized
+          className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+          priority
+        />
+      }
       title="The Awa Maru"
       imageSrc="/images/the-awa-maru.jpg?v=2"
       imageAlt="Zoomed-in underwater view of the Awa Maru wreckage ripped apart on the seabed of the Taiwan Strait, with gold bullion and platinum ingots half-buried in dark mud"
