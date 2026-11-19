@@ -22,7 +22,12 @@ export default function PadmanabhaswamyTempleVaultBPage() {
           priority
         />
       }
-      title="Padmanabhaswamy Temple Vault B"
+      title={
+        <>
+          Padmanabhaswamy Temple <br className="hidden sm:inline" />
+          <span className="whitespace-nowrap">Vault B</span>
+        </>
+      }
       imageSrc="/images/padmanabhaswamy-vault-b.jpg"
       imageAlt="Mysterious cobra-adorned iron portal of Vault B inside the subterranean granite corridors of Sree Padmanabhaswamy Temple, Kerala, India"
     >

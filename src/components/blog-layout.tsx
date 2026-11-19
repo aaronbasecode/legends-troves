@@ -78,7 +78,7 @@ export function WaterTreasureIcon({ className = 'w-16 h-16 sm:w-20 sm:h-20' }: {
 export interface BlogLayoutProps {
   category?: 'land' | 'water';
   topIcon?: ReactNode;
-  title: string;
+  title: ReactNode;
   imageSrc?: string;
   imageAlt?: string;
   showHeroBox?: boolean;
@@ -126,7 +126,7 @@ export function BlogLayout({
               {imageSrc && (
                 <Image
                   src={imageSrc}
-                  alt={imageAlt || title}
+                  alt={imageAlt || (typeof title === 'string' ? title : '')}
                   fill
                   className="object-cover"
                   priority
