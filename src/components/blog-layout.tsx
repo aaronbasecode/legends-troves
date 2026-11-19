@@ -122,16 +122,18 @@ export function BlogLayout({
 
           {/* Responsive Hero Image container */}
           {(imageSrc || showHeroBox) && (
-            <div className="w-full max-w-[840px] aspect-[840/458] min-h-[200px] rounded-[14px] overflow-hidden relative shadow-sm mb-8 sm:mb-10 bg-[#D8D1B6]">
-              {imageSrc && (
-                <Image
-                  src={imageSrc}
-                  alt={imageAlt || (typeof title === 'string' ? title : '')}
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              )}
+            <div className="w-full max-w-[840px] mb-8 sm:mb-10 drop-shadow-[0_1px_2px_rgba(44,37,4,0.14)]">
+              <div className="w-full aspect-[840/458] min-h-[200px] parchment-card rounded-none overflow-hidden relative bg-[#D8D1B6]">
+                {imageSrc && (
+                  <Image
+                    src={imageSrc}
+                    alt={imageAlt || (typeof title === 'string' ? title : '')}
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                )}
+              </div>
             </div>
           )}
 
