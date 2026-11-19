@@ -36,7 +36,7 @@ export default function AboutPage() {
             {/* Left Column: Two stacked cards */}
             <div className="flex flex-col gap-5">
               {/* Card 1: Our Mission */}
-              <div className="drop-shadow-[0_10px_20px_rgba(44,37,4,0.28)]">
+              <div className="drop-shadow-[0_1px_2px_rgba(44,37,4,0.14)]">
                 <section className="bg-parchment parchment-card rounded-none p-6 sm:p-7 flex flex-col">
                   <h2 className="font-gothic text-[30px] font-bold text-[#2C2504] mb-3 leading-tight">
                     Our Mission
@@ -48,7 +48,7 @@ export default function AboutPage() {
               </div>
 
               {/* Card 2: Built for Treasure Hunters, Explorers & History Enthusiasts */}
-              <div className="drop-shadow-[0_10px_20px_rgba(44,37,4,0.28)] flex flex-col flex-1">
+              <div className="drop-shadow-[0_1px_2px_rgba(44,37,4,0.14)] flex flex-col flex-1">
                 <section className="bg-parchment parchment-card rounded-none p-6 sm:p-7 flex flex-col flex-1">
                   <h2 className="font-gothic text-[30px] font-bold text-[#2C2504] mb-3 leading-[34px]">
                     Built for Treasure Hunters, Explorers &amp; History Enthusiasts
@@ -61,7 +61,7 @@ export default function AboutPage() {
             </div>
 
             {/* Right Column: What You Can Explore */}
-            <div className="drop-shadow-[0_10px_20px_rgba(44,37,4,0.28)] flex flex-col">
+            <div className="drop-shadow-[0_1px_2px_rgba(44,37,4,0.14)] flex flex-col">
               <section className="bg-parchment parchment-card rounded-none p-6 sm:p-7 flex flex-col flex-1 justify-between">
               <div>
                 <h2 className="font-gothic text-[30px] font-bold text-[#2C2504] mb-5 leading-tight">
