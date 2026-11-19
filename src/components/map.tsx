@@ -342,15 +342,73 @@ const Map = () => {
             ? nauticalIcon
             : landIcon;
         const marker = L.marker(treasure.coords as L.LatLngExpression, { icon: markerIcon }).addTo(mapRef.current!);
-        
-        marker.on('popupopen', () => {
+
+        let closeTimer: ReturnType<typeof setTimeout> | null = null;
+        let isPinned = false;
+        let isOverPopup = false;
+
+        const clearCloseTimer = () => {
+          if (closeTimer) {
+            clearTimeout(closeTimer);
+            closeTimer = null;
+          }
+        };
+
+        const scheduleClose = () => {
+          clearCloseTimer();
+          closeTimer = setTimeout(() => {
+            if (!isPinned && !isOverPopup) {
+              marker.closePopup();
+            }
+          }, 180);
+        };
+
+        marker.on('mouseover', () => {
+          clearCloseTimer();
+          if (!marker.isPopupOpen()) {
+            marker.openPopup();
+          }
+        });
+
+        marker.on('mouseout', () => {
+          if (!isPinned) {
+            scheduleClose();
+          }
+        });
+
+        marker.on('click', () => {
+          isPinned = true;
+          clearCloseTimer();
+          if (!marker.isPopupOpen()) {
+            marker.openPopup();
+          }
+        });
+
+        marker.on('popupopen', (e) => {
           const el = marker.getElement();
           if (el) {
             el.classList.add('active-marker');
           }
+          const popupEl = e.popup.getElement();
+          if (popupEl && !popupEl.dataset.hoverBound) {
+            popupEl.dataset.hoverBound = 'true';
+            popupEl.addEventListener('mouseenter', () => {
+              isOverPopup = true;
+              clearCloseTimer();
+            });
+            popupEl.addEventListener('mouseleave', () => {
+              isOverPopup = false;
+              if (!isPinned) {
+                scheduleClose();
+              }
+            });
+          }
         });
 
         marker.on('popupclose', () => {
+          isPinned = false;
+          isOverPopup = false;
+          clearCloseTimer();
           const el = marker.getElement();
           if (el) {
             el.classList.remove('active-marker');
