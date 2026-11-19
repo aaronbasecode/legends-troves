@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { BlogLayout, BlogSection, BlogList, BlogListItem } from '@/components/blog-layout';
 
 export const metadata: Metadata = {
@@ -10,6 +11,17 @@ export default function SwordOfKusanagiPage() {
   return (
     <BlogLayout
       category="land"
+      topIcon={
+        <Image
+          src="/images/kusanagi-sword-icon.webp"
+          alt="Sword of Kusanagi Coin"
+          width={80}
+          height={80}
+          unoptimized
+          className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+          priority
+        />
+      }
       title="Sword of Kusanagi"
       imageSrc="/images/sword-of-kusanagi.jpg"
       imageAlt="The legendary divine Japanese blade Kusanagi-no-Tsurugi resting on a ceremonial lacquer stand inside a sacred Shinto shrine sanctuary"

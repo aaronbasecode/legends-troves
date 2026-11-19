@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { BlogLayout, BlogSection, BlogList, BlogListItem } from '@/components/blog-layout';
 
 export const metadata: Metadata = {
@@ -10,6 +11,17 @@ export default function PadmanabhaswamyTempleVaultBPage() {
   return (
     <BlogLayout
       category="land"
+      topIcon={
+        <Image
+          src="/images/padmanabhaswamy-icon.webp"
+          alt="Padmanabhaswamy Temple Vault B Coin"
+          width={80}
+          height={80}
+          unoptimized
+          className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+          priority
+        />
+      }
       title="Padmanabhaswamy Temple Vault B"
       imageSrc="/images/padmanabhaswamy-vault-b.jpg"
       imageAlt="Mysterious cobra-adorned iron portal of Vault B inside the subterranean granite corridors of Sree Padmanabhaswamy Temple, Kerala, India"

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { BlogLayout, BlogSection, BlogList, BlogListItem } from '@/components/blog-layout';
 
 export const metadata: Metadata = {
@@ -10,6 +11,17 @@ export default function CityOfTheCaesarsPage() {
   return (
     <BlogLayout
       category="land"
+      topIcon={
+        <Image
+          src="/images/city-of-the-caesars-icon.webp"
+          alt="The City of the Caesars Coin"
+          width={80}
+          height={80}
+          unoptimized
+          className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+          priority
+        />
+      }
       title="The City of the Caesars"
       imageSrc="/images/the-city-of-the-caesars.jpg"
       imageAlt="The City of the Caesars with stone paved streets, residents dining on solid silver, and cathedrals crowned with pure gold crosses"

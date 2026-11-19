@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { BlogLayout, BlogSection, BlogList, BlogListItem } from '@/components/blog-layout';
 
 export const metadata: Metadata = {
@@ -10,6 +11,17 @@ export default function TheTreasureOfTheCopperScrollPage() {
   return (
     <BlogLayout
       category="land"
+      topIcon={
+        <Image
+          src="/images/copper-scroll-icon.webp"
+          alt="The Treasure of the Copper Scroll Coin"
+          width={80}
+          height={80}
+          unoptimized
+          className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+          priority
+        />
+      }
       title="The Treasure of the Copper Scroll"
       imageSrc="/images/the-treasure-of-the-copper-scroll.jpg"
       imageAlt="Two heavily oxidized greenish-bronze cylindrical rolls of the Dead Sea Copper Scroll resting on a natural rock shelf inside Qumran Cave 3"

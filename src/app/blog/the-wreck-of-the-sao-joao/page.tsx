@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { BlogLayout, BlogSection, BlogList, BlogListItem } from '@/components/blog-layout';
 
 export const metadata: Metadata = {
@@ -10,6 +11,17 @@ export default function TheWreckOfTheSaoJoaoPage() {
   return (
     <BlogLayout
       category="water"
+      topIcon={
+        <Image
+          src="/images/sao-joao-icon.webp"
+          alt="The Wreck of the São João Coin"
+          width={80}
+          height={80}
+          unoptimized
+          className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+          priority
+        />
+      }
       title="The Wreck of the São João"
       imageSrc="/images/the-wreck-of-the-sao-joao.jpg"
       imageAlt="The Portuguese galleon São João with a fractured mainmast helplessly battered by mountainous winter swells off the Cape of Storms"

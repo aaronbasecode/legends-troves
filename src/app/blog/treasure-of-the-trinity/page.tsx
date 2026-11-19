@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { BlogLayout, BlogSection, BlogList, BlogListItem } from '@/components/blog-layout';
 
 export const metadata: Metadata = {
@@ -10,6 +11,17 @@ export default function TreasureOfTheTrinityPage() {
   return (
     <BlogLayout
       category="land"
+      topIcon={
+        <Image
+          src="/images/treasure-of-the-trinity-icon.webp"
+          alt="Treasure of the Trinity Coin"
+          width={80}
+          height={80}
+          unoptimized
+          className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+          priority
+        />
+      }
       title="Treasure of the Trinity"
       imageSrc="/images/treasure-of-the-trinity.jpg"
       imageAlt="Pirates burying the Treasure of the Trinity on the volcanic shores of Ilha da Trindade"

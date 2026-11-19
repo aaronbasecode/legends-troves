@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { BlogLayout, BlogSection, BlogList, BlogListItem } from '@/components/blog-layout';
 
 export const metadata: Metadata = {
@@ -10,6 +11,17 @@ export default function TheTombOfCleopatraPage() {
   return (
     <BlogLayout
       category="land"
+      topIcon={
+        <Image
+          src="/images/cleopatra-icon.webp"
+          alt="The Tomb of Cleopatra Coin"
+          width={80}
+          height={80}
+          unoptimized
+          className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+          priority
+        />
+      }
       title="The Tomb of Cleopatra"
       imageSrc="/images/the-tomb-of-cleopatra.jpg"
       imageAlt="Opulent subterranean Ptolemaic royal tomb chamber of Queen Cleopatra VII illuminated by oil lamps and golden relics near Alexandria, Egypt"

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { BlogLayout, BlogSection, BlogList, BlogListItem } from '@/components/blog-layout';
 
 export const metadata: Metadata = {
@@ -10,6 +11,17 @@ export default function LassetersReefPage() {
   return (
     <BlogLayout
       category="land"
+      topIcon={
+        <Image
+          src="/images/lasseters-reef-icon.webp"
+          alt="Lasseter's Reef Coin"
+          width={80}
+          height={80}
+          unoptimized
+          className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+          priority
+        />
+      }
       title="Lasseter's Reef"
       imageSrc="/images/lasseters-reef.jpg?v=3"
       imageAlt="Harold Bell Lasseter discovering the fabled quartz reef stretching into the Australian desert, bursting with rich seams of pure crystalline gold"

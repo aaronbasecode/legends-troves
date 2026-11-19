@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { BlogLayout, BlogSection, BlogList, BlogListItem } from '@/components/blog-layout';
 
 export const metadata: Metadata = {
@@ -10,6 +11,17 @@ export default function TheNaziGoldTrainPage() {
   return (
     <BlogLayout
       category="land"
+      topIcon={
+        <Image
+          src="/images/nazi-gold-train-icon.webp"
+          alt="The Nazi Gold Train Coin"
+          width={80}
+          height={80}
+          unoptimized
+          className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+          priority
+        />
+      }
       title="The Nazi Gold Train"
       imageSrc="/images/the-nazi-gold-train.jpg"
       imageAlt="An armored WWII military train entering a secret underground tunnel complex in the Owl Mountains, Poland, winter 1945"

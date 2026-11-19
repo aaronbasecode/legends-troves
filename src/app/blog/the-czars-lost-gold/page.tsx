@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { BlogLayout, BlogSection, BlogList, BlogListItem } from '@/components/blog-layout';
 
 export const metadata: Metadata = {
@@ -10,6 +11,17 @@ export default function TheCzarsLostGoldPage() {
   return (
     <BlogLayout
       category="water"
+      topIcon={
+        <Image
+          src="/images/czars-lost-gold-icon.webp"
+          alt="The Czar's Lost Gold Coin"
+          width={80}
+          height={80}
+          unoptimized
+          className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+          priority
+        />
+      }
       title="The Czar's Lost Gold"
       imageSrc="/images/the-czars-lost-gold.jpg?v=3"
       imageAlt="Sunken Imperial Russian train wagon resting on the rocky floor of Lake Baikal beneath cracked winter ice, with crates spilling imperial gold bullion and coins into the deep abyss"

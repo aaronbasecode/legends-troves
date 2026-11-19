@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { BlogLayout, BlogSection, BlogList, BlogListItem } from '@/components/blog-layout';
 
 export const metadata: Metadata = {
@@ -10,6 +11,17 @@ export default function TheImperialSealOfChinaPage() {
   return (
     <BlogLayout
       category="land"
+      topIcon={
+        <Image
+          src="/images/imperial-seal-icon.webp"
+          alt="The Imperial Seal of China Coin"
+          width={80}
+          height={80}
+          unoptimized
+          className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+          priority
+        />
+      }
       title="The Imperial Seal of China"
       imageSrc="/images/the-imperial-seal-of-china.jpg"
       imageAlt="The Heirloom Seal of the Realm carved from sacred Heshibi jade with coiled imperial dragons and a gold-inlaid corner repair"

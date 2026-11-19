@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { BlogLayout, BlogSection, BlogList, BlogListItem } from '@/components/blog-layout';
 
 export const metadata: Metadata = {
@@ -10,6 +11,17 @@ export default function TheSunkenTreasureOfIssykKulPage() {
   return (
     <BlogLayout
       category="water"
+      topIcon={
+        <Image
+          src="/images/issyk-kul-icon.webp"
+          alt="The Sunken Treasure of Issyk-Kul Coin"
+          width={80}
+          height={80}
+          unoptimized
+          className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+          priority
+        />
+      }
       title="The Sunken Treasure of Issyk-Kul"
       imageSrc="/images/the-sunken-treasure-of-issyk-kul.jpg"
       imageAlt="White Army soldiers and Semirechye Cossacks leading a pack camel treasure caravan through the snowy Tian Shan mountain passes overlooking Lake Issyk-Kul during the Russian Civil War"

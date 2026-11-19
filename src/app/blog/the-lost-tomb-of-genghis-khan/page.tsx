@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { BlogLayout, BlogSection, BlogList, BlogListItem } from '@/components/blog-layout';
 
 export const metadata: Metadata = {
@@ -10,6 +11,17 @@ export default function TheLostTombOfGenghisKhanPage() {
   return (
     <BlogLayout
       category="land"
+      topIcon={
+        <Image
+          src="/images/genghis-khan-icon.webp"
+          alt="The Lost Tomb of Genghis Khan Coin"
+          width={80}
+          height={80}
+          unoptimized
+          className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+          priority
+        />
+      }
       title="The Lost Tomb of Genghis Khan"
       imageSrc="/images/the-lost-tomb-of-genghis-khan.jpg"
       imageAlt="Mystical subterranean burial chamber of Genghis Khan with white horsetail spirit banners, gold armor, and chests of Eurasian conquest treasures in Mongolia"
