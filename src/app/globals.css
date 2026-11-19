@@ -159,19 +159,19 @@ body {
   filter: sepia(35%) contrast(105%) brightness(95%) saturate(90%);
 }
 
-/* Lightweight old-map crumpled parchment texture (uniformly tiled across cards and full blog pages, <1.5KB) */
+/* Subtle, non-uniform old-map parchment texture (incommensurate large-scale undulation + fine fiber grain + non-repeating mottling, <1.5KB) */
 .bg-parchment {
-  background-color: #dfcca6;
+  background-color: #e4d3b0;
   background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320'%3E%3Cfilter id='c'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.012 0.015' numOctaves='4' seed='7' stitchTiles='stitch' result='t'/%3E%3CfeDiffuseLighting in='t' lighting-color='%23eee0c0' surfaceScale='3.8' result='l'%3E%3CfeDistantLight azimuth='130' elevation='42'/%3E%3C/feDiffuseLighting%3E%3C/filter%3E%3Crect width='320' height='320' filter='url(%23c)' opacity='0.42'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.05' numOctaves='5' stitchTiles='stitch' result='n'/%3E%3CfeDiffuseLighting in='n' lighting-color='%23f2e5c7' surfaceScale='1.9'%3E%3CfeDistantLight azimuth='45' elevation='55'/%3E%3C/feDiffuseLighting%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23g)' opacity='0.3'/%3E%3C/svg%3E"),
-    linear-gradient(118deg, transparent 36%, rgba(128, 94, 44, 0.11) 40%, rgba(252, 242, 218, 0.22) 42%, transparent 46%),
-    linear-gradient(28deg, transparent 56%, rgba(122, 88, 38, 0.1) 60%, rgba(252, 242, 218, 0.18) 62%, transparent 66%),
-    radial-gradient(ellipse at 24% 28%, rgba(176, 138, 80, 0.26) 0%, transparent 58%),
-    radial-gradient(ellipse at 78% 74%, rgba(164, 126, 70, 0.25) 0%, transparent 55%),
-    radial-gradient(ellipse at 50% 50%, rgba(238, 224, 192, 0.18) 0%, rgba(148, 112, 58, 0.24) 100%);
-  background-repeat: repeat, repeat, repeat, repeat, repeat, repeat, no-repeat;
-  background-size: 320px 320px, 220px 220px, 420px 420px, 380px 380px, 520px 520px, 480px 480px, 100% 100%;
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='760' height='760'%3E%3Cfilter id='w'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.0045 0.006' numOctaves='4' seed='11' stitchTiles='stitch' result='t'/%3E%3CfeDiffuseLighting in='t' lighting-color='%23f1e4c6' surfaceScale='1.55'%3E%3CfeDistantLight azimuth='125' elevation='62'/%3E%3C/feDiffuseLighting%3E%3C/filter%3E%3Crect width='760' height='760' filter='url(%23w)' opacity='0.22'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='430' height='430'%3E%3Cfilter id='c'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.009 0.011' numOctaves='3' seed='23' stitchTiles='stitch' result='t'/%3E%3CfeDiffuseLighting in='t' lighting-color='%23efe1c2' surfaceScale='1.35'%3E%3CfeDistantLight azimuth='35' elevation='64'/%3E%3C/feDiffuseLighting%3E%3C/filter%3E%3Crect width='430' height='430' filter='url(%23c)' opacity='0.14'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='230' height='230'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.055' numOctaves='4' stitchTiles='stitch' result='n'/%3E%3CfeDiffuseLighting in='n' lighting-color='%23f5ead0' surfaceScale='1.15'%3E%3CfeDistantLight azimuth='50' elevation='66'/%3E%3C/feDiffuseLighting%3E%3C/filter%3E%3Crect width='230' height='230' filter='url(%23g)' opacity='0.18'/%3E%3C/svg%3E"),
+    radial-gradient(ellipse at 16% 22%, rgba(178, 140, 82, 0.16) 0%, transparent 55%),
+    radial-gradient(ellipse at 84% 68%, rgba(166, 128, 72, 0.15) 0%, transparent 52%),
+    radial-gradient(ellipse at 42% 85%, rgba(184, 148, 92, 0.12) 0%, transparent 48%),
+    radial-gradient(ellipse at 50% 50%, rgba(245, 234, 208, 0.12) 0%, rgba(152, 116, 62, 0.18) 100%);
+  background-repeat: repeat, repeat, repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  background-size: 760px 760px, 430px 430px, 230px 230px, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
 }
 
 /* Ragged deckle-edged torn parchment card (fine, non-uniform organic edge) */
